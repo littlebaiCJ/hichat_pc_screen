@@ -1,47 +1,65 @@
 @import "../font/iconfont.css";
 
 /*reset*/
-html,body{ width: 100%; height: 100%; }
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
-padding: 0;
-margin: 0;
+html, body{ width:100%; height:100%; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td{
+padding:0;
+margin:0;
 }
-table {
-border-collapse: collapse;
-border-spacing: 0;
+table{
+border-collapse:collapse;
+border-spacing:0;
 }
-fieldset,img {
-border: 0;
+fieldset, img{
+border:0;
 }
-address,caption,cite,code,dfn,em,strong,th,var {
-font-weight: normal;
-font-style: normal;
+address, caption, cite, code, dfn, em, strong, th, var{
+font-weight:normal;
+font-style:normal;
 }
-ol,ul {
-list-style: none;
+ol, ul{
+list-style:none;
 }
-caption,th {
-text-align: left;
+caption, th{
+text-align:left;
 }
-h1,h2,h3,h4,h5,h6 {
-font-weight: normal;
-font-size: 100%;
+h1, h2, h3, h4, h5, h6{
+font-weight:normal;
+font-size:100%;
 }
-q:before,q:after {
-content: "";
+q:before, q:after{
+content:"";
 }
-abbr,acronym {
-border: 0;
+abbr, acronym{
+border:0;
 }
 
 /*body字体*/
 body{
-font-family: Microsoft YaHei;
-font-size: 16px;
+font-family:Microsoft YaHei;
+font-size:16px;
 }
 
-/*主屏内容*/
-.content{ height: 100%; width: 100%; }
-aside{ height: 100%; width: 300px; background: #000; position: relative; }
-aside:after{ content: ""; position: absolute; height: 50px; width: 10px; background: red; top: 0; bottom: 0; margin: auto 0; right: -10px;  }
+/*侧栏内容*/
+.wrap{ height:100%; width:100%; }
+aside{ height:100%; width:300px; background: #FFF; border-right:1px solid #ddd; box-shadow: 0 5px 50px rgba(180,180,180,0.5); box-sizing: border-box; position:absolute; left:-300px; }
+aside span{ display:block; position:absolute; height:50px; width:20px; background:rgba(0, 0, 0, 0.5); border-radius:0 10px 10px 0; top:0; bottom:0; margin:auto 0; right:-20px; font-size:18px; color:#fff; line-height:50px; cursor:pointer; }
+@keyframes aside-leftToright{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(100%);
+}
+}
+@keyframes aside-rightToleft{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(0);
+}
+}
+.aside-leftToright{ -webkit-animation:aside-leftToright 400ms forwards; }
+.aside-rightToleft{ -webkit-animation:aside-rightToleft 400ms forwards; }

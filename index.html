@@ -6,10 +6,39 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 <body>
-    <div class="content">
+    <div class="wrap">
         <aside>
-            <span class=""></span>
+            <div class="aside-content">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <span id="control-element" class="iconfont icon-aside-right"></span>
         </aside>
+        <div class="main-content">
+            哈哈哈
+        </div>
     </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function (){
+            var onOff=true;
+            $('#control-element').click(function(){
+                if(onOff){
+                    $(this).parent('aside').removeClass('aside-rightToleft').addClass('aside-leftToright');
+                    $(this).attr('class','iconfont icon-aside-left');
+                    onOff=!onOff;
+                }else{
+                    $(this).parent('aside').removeClass('aside-leftToright').addClass('aside-rightToleft');
+                    $(this).attr('class','iconfont icon-aside-right');
+                    onOff=!onOff;
+                }
+            })
+        })
+    </script>
 </body>
 </html>

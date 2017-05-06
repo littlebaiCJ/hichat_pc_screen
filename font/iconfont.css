@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-zuoyoujiantou-copy-copy:before { content: "\e64a"; }
+.icon-aside-right:before { content: "\e64a"; }
 
-.icon-zuoyoujiantou-copy-copy-copy:before { content: "\e64b"; }
+.icon-aside-left:before { content: "\e64b"; }
 
