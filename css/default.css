@@ -1,4 +1,4 @@
-@import "../font/iconfont.css";
+@import "../font/iconfont.css?v=1";
 
 /*reset*/
 html, body{ width:100%; height:100%; }
@@ -40,11 +40,13 @@ body{
 font-family:Microsoft YaHei;
 font-size:16px;
 }
+/*自定义全局class*/
+.flex{display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */ display: -moz-box; /* Firefox 17- */ display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */ display: -moz-flex; /* Firefox 18+ */ display: -ms-flexbox; /* IE 10 */ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ -webkit-flex-direction: ro}
 
 /*侧栏内容*/
 .wrap{ height:100%; width:100%; }
-aside{ height:100%; width:300px; background: #FFF; border-right:1px solid #ddd; box-shadow: 0 5px 50px rgba(180,180,180,0.5); box-sizing: border-box; position:absolute; left:-300px; }
-aside span{ display:block; position:absolute; height:50px; width:20px; background:rgba(0, 0, 0, 0.5); border-radius:0 10px 10px 0; top:0; bottom:0; margin:auto 0; right:-20px; font-size:18px; color:#fff; line-height:50px; cursor:pointer; }
+aside{ height:100%; width:300px; background: #FFF; border-right:1px solid #ddd; box-shadow: 0 5px 50px rgba(180,180,180,0.5); position:absolute; left:-300px; }
+aside #control-element{ display:block; position:absolute; height:50px; width:20px; background:rgba(0, 0, 0, 0.5); border-radius:0 10px 10px 0; top:0; bottom:0; margin:auto 0; right:-20px; font-size:18px; color:#fff; line-height:50px; cursor:pointer; }
 @keyframes aside-leftToright{
 from{
 transform:translateX(0);
@@ -63,3 +65,8 @@ transform:translateX(0);
 }
 .aside-leftToright{ -webkit-animation:aside-leftToright 400ms forwards; }
 .aside-rightToleft{ -webkit-animation:aside-rightToleft 400ms forwards; }
+.aside-content ul{ width: 100%; overflow: hidden; }
+.aside-content ul li{ float: left; width: 100px; height: 100px; box-sizing: border-box; border-right: 1px solid #ddd; border-bottom:1px solid #ddd; flex-direction: column; align-items: center; justify-content: center; }
+.aside-content ul li:nth-of-type(3n){ border-right: none; }
+.aside-content ul li span{ font-size: 30px; display: block; }
+.aside-content ul li:hover{ color: #f93472; cursor: pointer; }

@@ -6,39 +6,46 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 <body>
-    <div class="wrap">
-        <aside>
-            <div class="aside-content">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <span id="control-element" class="iconfont icon-aside-right"></span>
-        </aside>
-        <div class="main-content">
-            哈哈哈
+<div class="wrap">
+    <aside>
+        <div class="aside-content">
+            <ul>
+                <li class="flex">
+                    <span class="iconfont icon-chat"></span> 聊天层
+                </li>
+                <li class="flex">
+                    <span class="iconfont icon-hongbao"></span> 红包层
+                </li>
+                <li class="flex">
+                    <span class="iconfont icon-shourubang"></span> 土豪榜
+                </li>
+                <li class="flex">
+                    <span class="iconfont icon-chat"></span> 聊天层
+                </li>
+            </ul>
         </div>
+        <span id="control-element" class="iconfont icon-aside-right"></span>
+    </aside>
+    <div class="main-content">
+        哈哈哈
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(function (){
-            var onOff=true;
-            $('#control-element').click(function(){
-                if(onOff){
-                    $(this).parent('aside').removeClass('aside-rightToleft').addClass('aside-leftToright');
-                    $(this).attr('class','iconfont icon-aside-left');
-                    onOff=!onOff;
-                }else{
-                    $(this).parent('aside').removeClass('aside-leftToright').addClass('aside-rightToleft');
-                    $(this).attr('class','iconfont icon-aside-right');
-                    onOff=!onOff;
-                }
-            })
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(function(){
+        var onOff = true;
+        $('#control-element').click(function(){
+            if(onOff){
+                $(this).parent('aside').removeClass('aside-rightToleft').addClass('aside-leftToright');
+                $(this).attr('class', 'iconfont icon-aside-left');
+                onOff = !onOff;
+            } else {
+                $(this).parent('aside').removeClass('aside-leftToright').addClass('aside-rightToleft');
+                $(this).attr('class', 'iconfont icon-aside-right');
+                onOff = !onOff;
+            }
         })
-    </script>
+    })
+</script>
 </body>
 </html>
