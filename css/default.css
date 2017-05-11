@@ -40,13 +40,24 @@ body{
 font-family:Microsoft YaHei;
 font-size:16px;
 }
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar{
+width:0px;
+background-color:#f5f5f5;
+}
+
 /*自定义全局class*/
 .flex{display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */ display: -moz-box; /* Firefox 17- */ display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */ display: -moz-flex; /* Firefox 18+ */ display: -ms-flexbox; /* IE 10 */ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ -webkit-flex-direction: ro}
+.textOverflow{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
 /*侧栏内容*/
 .wrap{ height:100%; width:100%; }
-aside{ height:100%; width:300px; background: #FFF; border-right:1px solid #ddd; box-shadow: 0 5px 50px rgba(180,180,180,0.5); position:absolute; left:-300px; }
-aside #control-element{ display:block; position:absolute; height:50px; width:20px; background:rgba(0, 0, 0, 0.5); border-radius:0 10px 10px 0; top:0; bottom:0; margin:auto 0; right:-20px; font-size:18px; color:#fff; line-height:50px; cursor:pointer; }
+aside{ height:100%; width:250px; background: #1b1b1b; position:absolute; left:-251px; z-index: 1; }
+aside .bar-info{ width: 100%; text-align: center; padding: 50px 0; }
+aside .bar-info img{ display: block; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto; }
+aside .bar-info span{ color: #FFF; font-size: 20px; }
+aside #control-element{ display:block; position:absolute; height:75px; width:18px; background: linear-gradient(#b944ee,#fe47a4); border-radius:0 20px 20px 0; top:0; bottom:0; margin:auto 0; right:-18px; font-size: 18px; color:#fff; line-height:75px; cursor:pointer; }
 @keyframes aside-leftToright{
 from{
 transform:translateX(0);
@@ -65,8 +76,55 @@ transform:translateX(0);
 }
 .aside-leftToright{ -webkit-animation:aside-leftToright 400ms forwards; }
 .aside-rightToleft{ -webkit-animation:aside-rightToleft 400ms forwards; }
-.aside-content ul{ width: 100%; overflow: hidden; }
-.aside-content ul li{ float: left; width: 100px; height: 100px; box-sizing: border-box; border-right: 1px solid #ddd; border-bottom:1px solid #ddd; flex-direction: column; align-items: center; justify-content: center; }
-.aside-content ul li:nth-of-type(3n){ border-right: none; }
-.aside-content ul li span{ font-size: 30px; display: block; }
-.aside-content ul li:hover{ color: #f93472; cursor: pointer; }
+.drag-content > div{ width: 100%; box-sizing: border-box; color: #FFF; font-size: 22px; padding: 15px 20px; }
+.drag-content > div span{ font-size: 22px; display: inline-block; width: 30px; height: 30px; margin-right: 15px; }
+.drag-content > div:hover{ background: linear-gradient(to right,#fe47a4,#b944ee); cursor: pointer; }
+.hide{ display: none; }
+
+/*聊天层内容*/
+.main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.redpacket-content{ position: absolute; width: 30%; height: 200px; border: 2px dashed red; text-align: right; }
+
+/*土豪榜*/
+.rank-content{ position: absolute;right: 20px; top: 50px; overflow: hidden; background: #1b1b1b; border-radius: 20px; width: 350px; z-index: 4; }
+.rank-content .rank-top-msg{ width: 100%; margin: 0 auto; padding: 20px; box-sizing: border-box; align-items: center; justify-content: center; -webkit-align-items: center; -webkit-justify-content: center; }
+.rank-content .rank-top-msg img{ width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; flex-shrink: 0;-webkit-flex-shrink: 0; }
+.rank-content .rank-top-msg div{ text-align: center; width: 100%; }
+.rank-content .rank-top-msg h3{ font-size: 24px; color: #FFF; font-weight: bold; width: 100%; }
+.rank-content .rank-top-msg p{ font-size: 18px; color: #FFF; }
+.rank-content > span{ color: #919191; display: block; width: 100%; text-align: center; padding: 10px 0; }
+.rank-content ul{ width: 100%; }
+.rank-content ul li{ width: 100%; padding: 0 20px; box-sizing: border-box; height: 60px; position: relative; z-index: 1; align-items: center; -webkit-align-items: center; }
+.rank-content ul li .bg-percentage{ position: absolute; left: 0; top: 0; height: 100%; z-index: 0; }
+.rank-content ul li .rank-user-status{ position: relative; width: 100%; font-size: 24px; align-items:center; -webkit-align-items: center; color: #FFF; z-index: 1; }
+.rank-content ul li .rank-user-status img{ width: 50px; height: 50px; border-radius: 50%; }
+.rank-content ul li .rank-user-status i{ font-style: normal; display: block; width: 100%; margin: 0 10px; }
+.rank-content ul li .rank-user-status > span{ font-size: 24px; }
+.rank-content ul li:first-of-type .bg-percentage{  background: #F500CE; }
+.rank-content ul li:nth-of-type(2) .bg-percentage{  background: #B246F4; }
+.rank-content ul li:nth-of-type(3) .bg-percentage{  background: #5773E9; }
+.rank-content ul li:nth-of-type(4) .bg-percentage{  background: #7926FF; }
+.rank-content ul li:nth-of-type(5) .bg-percentage{  background: #52E8D4; }
+.rank-content ul li:nth-of-type(6) .bg-percentage{  background: #FFA1DB; }
+
+/*二维码*/
+.hiChat-content{ position: absolute; right: 20px; bottom: 30px; border-radius: 20px; width: 350px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
+.hiChat-content .qrcode-imgwrap{ width: 130px; height: 130px; margin-right: 10px; border-radius: 10px; padding: 8px; background: #FFF; box-sizing: border-box; }
+.hiChat-content .qrcode-imgwrap img{ width:100%; }
+.hiChat-content .hiChat-text{ font-size: 0; color: #FFF; text-align: center; }
+.hiChat-content .hiChat-text p{ font-size: 36px; }
+.hiChat-content .hiChat-text p:last-of-type{ font-size: 30px; font-weight: bold; }
+.hiChat-content .hiChat-text span{ display: block; font-size: 16px; margin-top: 5px; border-bottom: 1px solid #FFF; font-style: italic; }
+
+/*欢迎语层*/
+.welcome-content{ position: absolute; left: 700px; width: 800px; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
+
+/*聊天层*/
+.chat-content{ position: absolute; left: 700px; top: 100px; width: 800px; height: 800px; overflow: auto; }
+.chat-content .message-content{  width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; border-radius: 50px; background: linear-gradient(to right,#e04fd2,#25e2e0); align-items: flex-start; }
+.chat-content .message-content:last-of-type{ margin-bottom: 0; }
+.chat-content .message-content > img{ height: 80px; width: 80px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
+.chat-content .message-content .message-user-info{ width: 100%; color: #FFF; width: 100%; }
+.chat-content .message-content .message-user-info i{ font-style: normal; display:block; font-size: 24px; }
+.chat-content .message-content .message-user-info > span{ font-size: 30px; font-weight: bold; }
+.chat-content .message-content .send-time{ flex-shrink: 0; color: #FFF; font-size: 24px; padding-right: 15px; }
