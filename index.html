@@ -8,26 +8,125 @@
 <body>
 <div class="wrap">
     <aside>
-        <div class="aside-content">
-            <ul>
-                <li class="flex">
-                    <span class="iconfont icon-chat"></span> 聊天层
-                </li>
-                <li class="flex">
-                    <span class="iconfont icon-hongbao"></span> 红包层
-                </li>
-                <li class="flex">
-                    <span class="iconfont icon-shourubang"></span> 土豪榜
-                </li>
-                <li class="flex">
-                    <span class="iconfont icon-chat"></span> 聊天层
-                </li>
-            </ul>
+        <div class="bar-info">
+            <img src="images/tx1.jpg" alt=""> <span>SHOWBAR</span>
+        </div>
+        <div class="drag-content">
+            <div class="draglist" id="drag-rank" draggable="true">
+                <span class="iconfont icon-shourubang"></span> 排行榜
+            </div>
+            <div class="draglist" id="drag-chat" draggable="true">
+                <span class="iconfont icon-liaotian"></span> 聊天窗口
+            </div>
+            <div class="draglist" id="drag-qrcode" draggable="true">
+                <span class="iconfont icon-erweima"></span> 二维码
+            </div>
+            <div class="draglist" id="drag-welcome" draggable="true">
+                <span class="iconfont icon-51yinliang"></span> 欢迎语
+            </div>
+            <div class="draglist" draggable="true">
+                <span class="iconfont icon-logo"></span> logo层
+            </div>
+            <div class="draglist" draggable="true">
+                <span class="iconfont icon-lunborongqi"></span> 图片轮播
+            </div>
+            <div class="draglist" draggable="true">
+                <span class="iconfont icon-shezhi"></span> 大屏幕设置
+            </div>
         </div>
         <span id="control-element" class="iconfont icon-aside-right"></span>
     </aside>
-    <div class="main-content">
-        哈哈哈
+    <div class="main-content" id="main-content" style="background-image: url(images/bg.jpg);">
+        <div class="welcome-content">
+            欢迎光临SHOW8BAR
+        </div>
+        <div class="chat-content">
+            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#f404c9,#333397); ">
+                <img src="images/tx2.jpg" alt="">
+                <div class="message-user-info">
+                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                </div>
+                <span class="send-time">03-02 20:30</span>
+            </div>
+            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#b545f2,#f96abc);">
+                <img src="images/tx3.jpg" alt="">
+                <div class="message-user-info">
+                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                </div>
+                <span class="send-time">03-02 20:30</span>
+            </div>
+            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#7b21ff,#41f2ae);">
+                <img src="images/tx4.jpg" alt="">
+                <div class="message-user-info">
+                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                </div>
+                <span class="send-time">03-02 20:30</span>
+            </div>
+            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#7b21ff,#41f2ae);">
+                <img src="images/tx4.jpg" alt="">
+                <div class="message-user-info">
+                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                </div>
+                <span class="send-time">03-02 20:30</span>
+            </div>
+        </div>
+        <div class="rank-content">
+            <div class="rank-top-msg flex">
+                <img src="images/tx.jpg" alt="">
+                <div class="textOverflow">
+                    <h3 class="textOverflow">SHOW8BAR排行榜</h3>
+                    <p>实时更新·Live Update</p>
+                </div>
+            </div>
+            <ul>
+                <li class="flex">
+                    <div class="bg-percentage" style="width: 100%;"></div>
+                    <div class="rank-user-status flex">
+                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                        <span class="iconfont icon-zuanshi">1212</span>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="bg-percentage" style="width: 85%;"></div>
+                    <div class="rank-user-status flex">
+                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                        <span class="iconfont icon-zuanshi">1212</span>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="bg-percentage" style="width: 60%;"></div>
+                    <div class="rank-user-status flex">
+                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                        <span class="iconfont icon-zuanshi">1212</span>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="bg-percentage" style="width: 40%;"></div>
+                    <div class="rank-user-status flex">
+                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                        <span class="iconfont icon-zuanshi">1212</span>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="bg-percentage" style="width: 20%;"></div>
+                    <div class="rank-user-status flex">
+                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                        <span class="iconfont icon-zuanshi">1212</span>
+                    </div>
+                </li>
+            </ul>
+            <span>嗨撩技术支持</span>
+        </div>
+        <div class="hiChat-content flex">
+            <div class="qrcode-imgwrap">
+                <img src="images/qrcode.png" alt="">
+            </div>
+            <div class="hiChat-text">
+                <p>扫码进入</p>
+                <p>嗨撩大屏幕</p>
+                <span>Welcome To HiChat</span>
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -46,6 +145,152 @@
             }
         })
     })
+</script>
+<script>
+    /*侧栏拖放*/
+    var eleChat = $("#main-content")[0], eleDrags = $(".draglist"), lDrags = eleDrags.length, eleDrag = null;
+    for(var i = 0; i < lDrags; i += 1){
+        eleDrags[i].onselectstart = function(){
+            return false;
+        };
+        eleDrags[i].ondragstart = function(ev){
+            /*拖拽开始*/
+            //拖拽效果
+            ev.dataTransfer.effectAllowed = "move";
+            ev.dataTransfer.setData("text", ev.target.id);
+            eleDrag = ev.target;
+            return true;
+        };
+        eleDrags[i].ondragend = function(ev){
+            /*拖拽结束*/
+            var dargeleX = ev.clientX;
+            var dargeleY = ev.clientY;
+            ev.dataTransfer.clearData("text");
+            switch(ev.target.id){
+                case "drag-chat":
+                    $('.chat-content').removeClass('hide');
+                    $('.chat-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+                case "drag-qrcode":
+                    $('.hiChat-content').removeClass('hide');
+                    $('.hiChat-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+                case "drag-welcome":
+                    $('.welcome-content').removeClass('hide');
+                    $('.welcome-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+            }
+            eleDrag = null;
+            return false
+        };
+    }
+    eleChat.ondragover = function(ev){
+        /*拖拽元素在目标元素头上移动的时候*/
+        ev.preventDefault();
+        return true;
+    };
+    eleChat.ondragenter = function(ev){
+        /*拖拽元素进入目标元素头上的时候*/
+        return true;
+    }
+    eleChat.ondrop = function(ev){
+        /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
+        if(eleDrag){
+            /*...*/
+        }
+    }
+
+    /*屏幕功能层移动*/
+    var rDrag = {
+        o : null,
+        init : function(o){
+            o.onmousedown = this.start;
+        },
+        start : function(e){
+            var o;
+            e = rDrag.fixEvent(e);
+            e.preventDefault && e.preventDefault();
+            rDrag.o = o = this;
+            o.x = e.clientX - rDrag.o.offsetLeft;
+            o.y = e.clientY - rDrag.o.offsetTop;
+            if(document.getElementById('switch_onoff').checked){
+                document.onmousemove = rDrag.move;
+            } else {
+                return false;
+            }
+            l = rDrag.o.style.left;
+            t = rDrag.o.style.top;
+            document.onmouseup = rDrag.end;
+        },
+        move : function(e){
+            var screen_width = document.body.offsetWidth;
+            console.log(screen_width);
+            var screen_height = document.body.offsetHeight;
+            e = rDrag.fixEvent(e);
+            var oLeft, oTop;
+            oLeft = e.clientX - rDrag.o.x;
+            oTop = e.clientY - rDrag.o.y;
+            if(oLeft <= 0){
+                oLeft = 0;
+            }
+            if(oTop <= 0){
+                oTop = 0;
+            }
+            if(screen_width - rDrag.o.offsetWidth <= oLeft){
+                oLeft = screen_width - rDrag.o.offsetWidth;
+            }
+            if(screen_height - rDrag.o.offsetHeight <= oTop){
+                oTop = screen_height - rDrag.o.offsetHeight;
+            }
+            rDrag.o.style.left = oLeft + 'px';
+            rDrag.o.style.top = oTop + 'px';
+            rDrag.o.style.border = '2px dashed #f8cb00';
+        },
+        end : function(e){
+            e = rDrag.fixEvent(e);
+            if(l == rDrag.o.style.left && t == rDrag.o.style.top){
+                popupConfig();
+                rDrag.o = document.onmousemove = document.onmouseup = null;
+            } else {
+                $('.szwz-page-content > div').unbind('click');
+                rDrag.o = document.onmousemove = document.onmouseup = null;
+            }
+        },
+        fixEvent : function(e){
+            if(!e){
+                e = window.event;
+                e.target = e.srcElement;
+                e.layerX = e.offsetX;
+                e.layerY = e.offsetY;
+            }
+            return e;
+        }
+    }
+    window.onload = function(){
+        //var obj = document.getElementById('tt1');
+        //rDrag.init(obj);
+        rDrag.init(document.getElementById('szwz-rank'));
+        rDrag.init(document.getElementById('szwz-chat-content'));
+        rDrag.init(document.getElementById('szwz-blackpacket'));
+        rDrag.init(document.getElementById('qr-code'));
+    }
+    window.onResize = function(){
+        //var obj = document.getElementById('tt1');
+        //rDrag.init(obj);
+        rDrag.init(document.getElementById('szwz-rank'));
+        rDrag.init(document.getElementById('szwz-chat-content'));
+        rDrag.init(document.getElementById('szwz-blackpacket'));
+        rDrag.init(document.getElementById('qr-code'));
+    }
 </script>
 </body>
 </html>
