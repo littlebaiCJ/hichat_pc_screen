@@ -7,6 +7,7 @@ form, fieldset, input, textarea, p, blockquote, th, td{
 padding:0;
 margin:0;
 }
+input,button{ outline: none; }
 table{
 border-collapse:collapse;
 border-spacing:0;
@@ -35,6 +36,7 @@ abbr, acronym{
 border:0;
 }
 
+i{ font-style: normal; }
 /*body字体*/
 body{
 font-family:Microsoft YaHei;
@@ -50,6 +52,8 @@ background-color:#f5f5f5;
 /*自定义全局class*/
 .flex{display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */ display: -moz-box; /* Firefox 17- */ display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */ display: -moz-flex; /* Firefox 18+ */ display: -ms-flexbox; /* IE 10 */ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ -webkit-flex-direction: ro}
 .textOverflow{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.icon-guanbi{ cursor: pointer; }
+.hide{ display: none; }
 
 /*侧栏内容*/
 .wrap{ height:100%; width:100%; }
@@ -79,14 +83,91 @@ transform:translateX(0);
 .drag-content > div{ width: 100%; box-sizing: border-box; color: #FFF; font-size: 22px; padding: 15px 20px; }
 .drag-content > div span{ font-size: 22px; display: inline-block; width: 30px; height: 30px; margin-right: 15px; }
 .drag-content > div:hover{ background: linear-gradient(to right,#fe47a4,#b944ee); cursor: pointer; }
-.hide{ display: none; }
-
+.label-switch {
+display: inline-block;
+vertical-align: middle;
+width: 52px;
+border-radius: 16px;
+box-sizing: border-box;
+height: 32px;
+position: relative;
+cursor: pointer;
+-ms-flex-item-align: center;
+-webkit-align-self: center;
+align-self: center;
+}
+.label-switch input[type="checkbox"] {
+display: none;
+}
+.label-switch .checkbox {
+width: 52px;
+border-radius: 16px;
+box-sizing: border-box;
+height: 32px;
+background: #e5e5e5;
+z-index: 0;
+margin: 0;
+padding: 0;
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-appearance: none;
+appearance: none;
+border: none;
+cursor: pointer;
+position: relative;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;
+}
+.label-switch .checkbox:before {
+content: ' ';
+position: absolute;
+left: 2px;
+top: 2px;
+width: 48px;
+border-radius: 16px;
+box-sizing: border-box;
+height: 28px;
+background: #fff;
+z-index: 1;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+.label-switch .checkbox:after {
+content: ' ';
+height: 28px;
+width: 28px;
+border-radius: 28px;
+background: #fff;
+position: absolute;
+z-index: 2;
+top: 2px;
+left: 2px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+-webkit-transform: translateX(0px);
+transform: translateX(0px);
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;
+}
+.label-switch input[type="checkbox"]:checked + .checkbox {
+background: linear-gradient(to right,#fe47a4,#b944ee);
+}
+.label-switch input[type="checkbox"]:checked + .checkbox:after {
+-webkit-transform: translateX(20px);
+transform: translateX(20px);
+}
+.label-switch input[type="checkbox"]:checked + .checkbox:before {
+-webkit-transform: scale(0);
+transform: scale(0);
+}
+.ctrl-move-onOff{ font-size: 22px; position: absolute; bottom: 10px; width: 100%; color: #FFF; padding-left: 20px; box-sizing: border-box; }
 /*聊天层内容*/
-.main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: 100%; }
 .redpacket-content{ position: absolute; width: 30%; height: 200px; border: 2px dashed red; text-align: right; }
 
 /*土豪榜*/
-.rank-content{ position: absolute;right: 20px; top: 50px; overflow: hidden; background: #1b1b1b; border-radius: 20px; width: 350px; z-index: 4; }
+.rank-content{ position: absolute; overflow: hidden; background: #1b1b1b; border-radius: 20px; width: 350px; z-index: 4; }
 .rank-content .rank-top-msg{ width: 100%; margin: 0 auto; padding: 20px; box-sizing: border-box; align-items: center; justify-content: center; -webkit-align-items: center; -webkit-justify-content: center; }
 .rank-content .rank-top-msg img{ width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; flex-shrink: 0;-webkit-flex-shrink: 0; }
 .rank-content .rank-top-msg div{ text-align: center; width: 100%; }
@@ -108,7 +189,7 @@ transform:translateX(0);
 .rank-content ul li:nth-of-type(6) .bg-percentage{  background: #FFA1DB; }
 
 /*二维码*/
-.hiChat-content{ position: absolute; right: 20px; bottom: 30px; border-radius: 20px; width: 350px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
+.hiChat-content{ position: absolute; border-radius: 20px; width: 350px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
 .hiChat-content .qrcode-imgwrap{ width: 130px; height: 130px; margin-right: 10px; border-radius: 10px; padding: 8px; background: #FFF; box-sizing: border-box; }
 .hiChat-content .qrcode-imgwrap img{ width:100%; }
 .hiChat-content .hiChat-text{ font-size: 0; color: #FFF; text-align: center; }
@@ -117,14 +198,45 @@ transform:translateX(0);
 .hiChat-content .hiChat-text span{ display: block; font-size: 16px; margin-top: 5px; border-bottom: 1px solid #FFF; font-style: italic; }
 
 /*欢迎语层*/
-.welcome-content{ position: absolute; left: 700px; width: 800px; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
+.welcome-content{ position: absolute; width: 800px; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
 
 /*聊天层*/
-.chat-content{ position: absolute; left: 700px; top: 100px; width: 800px; height: 800px; overflow: auto; }
-.chat-content .message-content{  width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; border-radius: 50px; background: linear-gradient(to right,#e04fd2,#25e2e0); align-items: flex-start; }
+.chat-content{ position: absolute; width: 800px; height: 800px; overflow: auto; }
+.chat-content .message-content{ position: relative; width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; border-radius: 50px; background: linear-gradient(to right,#e04fd2,#25e2e0); align-items: flex-start; }
 .chat-content .message-content:last-of-type{ margin-bottom: 0; }
 .chat-content .message-content > img{ height: 80px; width: 80px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
-.chat-content .message-content .message-user-info{ width: 100%; color: #FFF; width: 100%; }
-.chat-content .message-content .message-user-info i{ font-style: normal; display:block; font-size: 24px; }
-.chat-content .message-content .message-user-info > span{ font-size: 30px; font-weight: bold; }
-.chat-content .message-content .send-time{ flex-shrink: 0; color: #FFF; font-size: 24px; padding-right: 15px; }
+.chat-content .message-content .message-user-info{ width: 85%; color: #FFF; }
+.chat-content .message-content .message-user-info i{ max-width: 70%; font-style: normal; display:block; font-size: 24px; }
+.chat-content .message-content .message-user-info > span{ display: block; font-size: 36px; letter-spacing: 2px; font-weight: bold; }
+.chat-content .message-content .send-time{ position: absolute; top: 10px; color: #FFF; font-size: 24px; right: 60px; }
+.chat-content .pa-hasimg-content .message-user-info > span,.chat-content .pa-hastext-content .message-user-info > span{ color: #ffff01; }
+.chat-content .pa-hasimg-content .message-user-info > img{ margin-top: 10px; min-height: 25%; max-width: 80%; max-height: 280px; }
+
+/*广告层*/
+.adv-content{ position: absolute; width:300px;border-radius: 10px 10px 0 0; background-color: #1b1b1b; }
+.adv-content h3{ width: 92%; margin: 0 auto; color: #FFF; text-align: center; border-bottom: 2px solid #535353; font-size: 24px; padding: 10px 0; margin-bottom: 5px; }
+.adv-content img{ width: 100%; }
+
+/*大屏幕设置*/
+.screen-setting-panel{ overflow: hidden; position: absolute; width: 700px; height: 500px; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background-color: #1b1b1b; border-radius: 5px; z-index: 1; }
+.settint-panel-title{ height: 40px; width: 100%; background-color: #333333; line-height: 40px; color: #FFF; padding: 0 5px 0 20px; box-sizing: border-box; }
+.settint-panel-title i{ float: right; padding: 0 15px; }
+.panel-content{ height: calc(100% - 40px); height: -webkit-calc(100% - 40px); width: 100%; }
+.panel-list{ float: left; width: 20%; height: 100%;padding-top: 15px; border-right: 1px solid #333; box-sizing: border-box; }
+.panel-list li{ width: 100%; padding: 15px 0; color: #FFF; text-align: center; }
+.panel-list li:hover,.screen-setting-panel .panel-list li.active{ background: linear-gradient(to right,#fe47a4,#b545f1); cursor: pointer; }
+.panel-setting-input{ width: 80%; height: 100%; float: left; position: relative; }
+.panel-setting-input .pa-setting,.screen-setting-panel .panel-setting-input .screen-setting{ width: 100%; height: 98%; overflow: auto; }
+.panel-setting-input .pa-set-input,.screen-setting-panel .panel-setting-input .screen-bg-set{ font-size: 0; padding: 30px 30px 0 30px; box-sizing: border-box; color: #FFF; }
+.panel-setting-input .pa-set-input span,.screen-setting-panel .panel-setting-input .screen-bg-set span{  font-size: 16px; flex-shrink: 0; -webkit-flex-shrink: 0; margin-right: 40px; }
+.panel-setting-input .pa-set-input label,.screen-setting-panel .panel-setting-input .screen-bg-set label{ flex-basis: 0; display: inline-block; margin-right: 40px; font-size: 16px; }
+.panel-setting-input .pa-set-input label:last-of-type,.screen-setting-panel .panel-setting-input .screen-bg-set label:last-of-type{ margin-right: 0; }
+.panel-setting-input .pa-set-input label > *,.screen-setting-panel .panel-setting-input .screen-bg-set label > *{ display: inline-block; vertical-align: middle; }
+.panel-setting-input .pa-set-input input[type="radio"],.screen-setting-panel .panel-setting-input .screen-bg-set input[type="radio"]{ width: 18px; height: 18px; }
+.panel-setting-input .save{ position: absolute; bottom: 30px; right: 30px; font-size: 18px; border: none; color: #FFF; background: linear-gradient(to right,#fe47a4,#b545f1); padding:3px 20px; border-radius: 12px/50%; }
+.panel-setting-input .screen-setting .brightness{ align-items: center; -webkit-align-items: center; padding: 30px 30px 0 30px; color: #FFF; }
+.panel-setting-input .screen-setting .brightness input[type="range"]{ margin-left: 50px; }
+.panel-setting-input .screen-setting .rp-set,.panel-setting-input .screen-setting .screen-website,.panel-setting-input .screen-setting .programme-name{ padding: 30px 30px 0 30px; color: #FFF; }
+.panel-setting-input .screen-setting .rp-set span,.panel-setting-input .screen-setting .screen-website span,.panel-setting-input .screen-setting .programme-name span{ display: block; }
+.panel-setting-input .screen-setting .rp-set select{  font-size: 18px; margin-top: 10px; text-align: center; }
+.panel-setting-input .screen-setting .screen-website input,.panel-setting-input .screen-setting .programme-name input{ border: none; font-size: 16px; border-radius: 5px; margin-top: 10px;padding: 5px 10px; }
