@@ -30,47 +30,68 @@
             <div class="draglist" draggable="true">
                 <span class="iconfont icon-lunborongqi"></span> 图片轮播
             </div>
-            <div class="draglist" draggable="true">
+            <div class="setting-item" id="onOff-setting">
                 <span class="iconfont icon-shezhi"></span> 大屏幕设置
             </div>
+        </div>
+        <div class="ctrl-move-onOff">
+            <span>屏幕锁定</span> <label class="label-switch"> <input id="isMove" type="checkbox" checked>
+            <div class="checkbox"></div>
+        </label>
         </div>
         <span id="control-element" class="iconfont icon-aside-right"></span>
     </aside>
     <div class="main-content" id="main-content" style="background-image: url(images/bg.jpg);">
-        <div class="welcome-content">
+        <div class="adv-content hide" id="adv-content1" style=" top: 50px; left: 30px;">
+            <h3>派对预告/酒水优惠</h3>
+            <img src="images/tx.jpg" alt="">
+        </div>
+        <div class="adv-content hide" id="adv-content2" style=" top: 500px; left: 30px;">
+            <h3>广告招商</h3>
+            <img src="images/tx1.jpg" alt="">
+        </div>
+        <div class="welcome-content hide" id="welcome-content" style=" left: 600px;">
             欢迎光临SHOW8BAR
         </div>
-        <div class="chat-content">
-            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#f404c9,#333397); ">
+        <div class="chat-content hide" id="chat-content" style="left: 600px; top: 100px; ">
+            <div class="message-content flex" style=" background: linear-gradient(to right,#f404c9,#333397); ">
                 <img src="images/tx2.jpg" alt="">
                 <div class="message-user-info">
-                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    <i class="textOverflow">ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
                 </div>
                 <span class="send-time">03-02 20:30</span>
             </div>
-            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#b545f2,#f96abc);">
+            <div class="message-content flex" style=" background: linear-gradient(to right,#b545f2,#f96abc);">
                 <img src="images/tx3.jpg" alt="">
                 <div class="message-user-info">
-                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    <i class="textOverflow">没控啊</i> <span>哈哈哈哈哈奥或或或或或或</span>
                 </div>
                 <span class="send-time">03-02 20:30</span>
             </div>
-            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#7b21ff,#41f2ae);">
+            <div class="message-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
                 <img src="images/tx4.jpg" alt="">
                 <div class="message-user-info">
-                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    <i class="textOverflow">对面太肉了</i> <span>哈哈哈哈哈奥或或或或或或</span>
                 </div>
                 <span class="send-time">03-02 20:30</span>
             </div>
-            <div class="message-content flex" style=" background: linear-gradient(to right bottom,#7b21ff,#41f2ae);">
-                <img src="images/tx4.jpg" alt="">
+            <div class="message-content pa-hasimg-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
+                <img src="images/tx5.jpg" alt="">
                 <div class="message-user-info">
-                    <i>ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    <i class="textOverflow">中路一波推了</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
+                    <img src="images/tx.jpg" alt="">
+                </div>
+                <span class="send-time">03-02 20:30</span>
+            </div>
+            <div class="message-content pa-hastext-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
+                <img src="images/tx5.jpg" alt="">
+                <div class="message-user-info">
+                    <i>ailisi</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
                 </div>
                 <span class="send-time">03-02 20:30</span>
             </div>
         </div>
-        <div class="rank-content">
+        <div class="rank-content hide" id="rank-content" style="right: 20px; top: 50px;">
             <div class="rank-top-msg flex">
                 <img src="images/tx.jpg" alt="">
                 <div class="textOverflow">
@@ -117,7 +138,7 @@
             </ul>
             <span>嗨撩技术支持</span>
         </div>
-        <div class="hiChat-content flex">
+        <div class="hiChat-content flex hide" id="hiChat-content" style="right: 20px; top:600px;">
             <div class="qrcode-imgwrap">
                 <img src="images/qrcode.png" alt="">
             </div>
@@ -125,6 +146,71 @@
                 <p>扫码进入</p>
                 <p>嗨撩大屏幕</p>
                 <span>Welcome To HiChat</span>
+            </div>
+        </div>
+        <div class="screen-setting-panel hide" id="screen-setting-panel">
+            <div class="settint-panel-title">
+                <span>大屏幕设置</span> <i class="iconfont icon-guanbi"></i>
+            </div>
+            <div class="panel-content">
+                <ul class="panel-list">
+                    <li class="active">霸屏设置</li>
+                    <li>屏幕设置</li>
+                </ul>
+                <div class="panel-setting-input">
+                    <div class="pa-setting">
+                        <div class="pa-set-input flex">
+                            <span>风格</span>
+                            <div>
+                                <label> <input name="style-radio" type="radio"> <span>横款</span> </label> <label>
+                                <input name="style-radio" type="radio"> <span>竖款</span> </label> <label>
+                                <input name="style-radio" type="radio"> <span>兼容款</span> </label> <label>
+                                <input name="style-radio" type="radio"> <span>纯文字款</span> </label>
+                            </div>
+                        </div>
+                        <div class="pa-set-input flex">
+                            <span>效果</span>
+                            <div>
+                                <label> <input name="effect-radio" type="radio"> <span>炫酷</span></label> <label>
+                                <input name="effect-radio" type="radio"> <span>简洁</span> </label>
+                            </div>
+                        </div>
+                        <button class="save">保存</button>
+                    </div>
+                    <div class="screen-setting hide">
+                        <div class="screen-bg-set flex">
+                            <span>屏幕背景</span>
+                            <div>
+                                <label> <input name="bg-radio" type="radio"> <span>视频</span></label> <label>
+                                <input name="bg-radio" type="radio"> <span>图片</span> </label> <label>
+                                <input name="bg-radio" type="radio"> <span>黑色背景</span> </label> <label>
+                                <input name="bg-radio" type="radio"> <span>无背景</span> </label>
+                            </div>
+                        </div>
+                        <div class="brightness flex ">
+                            <span>屏幕亮度</span> <input type="range"/>
+                        </div>
+                        <div class="rp-set">
+                            <span>屏幕分辨率</span>
+                            <select name="" id="">
+                                <option>1920*1080</option>
+                            </select>
+                        </div>
+                        <div class="screen-website">
+                            <span>屏幕地址</span> <input type="url"/>
+                        </div>
+                        <div class="programme-name">
+                            <span>方案名称</span> <input type="text"/>
+                        </div>
+                        <div class="programme-name">
+                            <span>方案名称</span> <input type="text"/>
+                        </div>
+                        <div class="programme-name">
+                            <span>方案名称</span> <input type="text"/>
+                        </div>
+                        <button class="save">保存</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -147,68 +233,29 @@
     })
 </script>
 <script>
-    /*侧栏拖放*/
-    var eleChat = $("#main-content")[0], eleDrags = $(".draglist"), lDrags = eleDrags.length, eleDrag = null;
-    for(var i = 0; i < lDrags; i += 1){
-        eleDrags[i].onselectstart = function(){
-            return false;
-        };
-        eleDrags[i].ondragstart = function(ev){
-            /*拖拽开始*/
-            //拖拽效果
-            ev.dataTransfer.effectAllowed = "move";
-            ev.dataTransfer.setData("text", ev.target.id);
-            eleDrag = ev.target;
-            return true;
-        };
-        eleDrags[i].ondragend = function(ev){
-            /*拖拽结束*/
-            var dargeleX = ev.clientX;
-            var dargeleY = ev.clientY;
-            ev.dataTransfer.clearData("text");
-            switch(ev.target.id){
-                case "drag-chat":
-                    $('.chat-content').removeClass('hide');
-                    $('.chat-content').css({
-                        left : dargeleX,
-                        top : dargeleY
-                    });
-                    break;
-                case "drag-qrcode":
-                    $('.hiChat-content').removeClass('hide');
-                    $('.hiChat-content').css({
-                        left : dargeleX,
-                        top : dargeleY
-                    });
-                    break;
-                case "drag-welcome":
-                    $('.welcome-content').removeClass('hide');
-                    $('.welcome-content').css({
-                        left : dargeleX,
-                        top : dargeleY
-                    });
-                    break;
-            }
-            eleDrag = null;
-            return false
-        };
-    }
-    eleChat.ondragover = function(ev){
-        /*拖拽元素在目标元素头上移动的时候*/
-        ev.preventDefault();
-        return true;
-    };
-    eleChat.ondragenter = function(ev){
-        /*拖拽元素进入目标元素头上的时候*/
-        return true;
-    }
-    eleChat.ondrop = function(ev){
-        /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
-        if(eleDrag){
-            /*...*/
-        }
-    }
+    /*获取拖动div位置及宽高*/
+    function getDivX(tag_Div){
+        var targetLeft = $(tag_Div).css('left');
+        var targetTop = $(tag_Div).css('top');
+        var targetWidth = $(tag_Div).width();
+        var targetHeight = $(tag_Div).height();
+        var rightPoint = targetWidth + parseInt(targetLeft);
+        var bottomPoint = targetHeight + parseInt(targetTop);
 
+    }
+    getDivX('.chat-content');
+</script>
+<script>
+    var onOff = false;
+    $('#onOff-setting').click(function(){
+        onOff = true;
+        if(onOff){
+            $(this).css({
+                background : 'linear-gradient(to right,#fe47a4,#b944ee)'
+            })
+        }
+        $('#screen-setting-panel').removeClass('hide');
+    })
     /*屏幕功能层移动*/
     var rDrag = {
         o : null,
@@ -222,7 +269,7 @@
             rDrag.o = o = this;
             o.x = e.clientX - rDrag.o.offsetLeft;
             o.y = e.clientY - rDrag.o.offsetTop;
-            if(document.getElementById('switch_onoff').checked){
+            if(!$('#isMove').is(':checked')){
                 document.onmousemove = rDrag.move;
             } else {
                 return false;
@@ -258,7 +305,6 @@
         end : function(e){
             e = rDrag.fixEvent(e);
             if(l == rDrag.o.style.left && t == rDrag.o.style.top){
-                popupConfig();
                 rDrag.o = document.onmousemove = document.onmouseup = null;
             } else {
                 $('.szwz-page-content > div').unbind('click');
@@ -278,19 +324,140 @@
     window.onload = function(){
         //var obj = document.getElementById('tt1');
         //rDrag.init(obj);
-        rDrag.init(document.getElementById('szwz-rank'));
-        rDrag.init(document.getElementById('szwz-chat-content'));
-        rDrag.init(document.getElementById('szwz-blackpacket'));
-        rDrag.init(document.getElementById('qr-code'));
+        rDrag.init(document.getElementById('adv-content1'));
+        rDrag.init(document.getElementById('adv-content2'));
+        rDrag.init(document.getElementById('welcome-content'));
+        rDrag.init(document.getElementById('chat-content'));
+        rDrag.init(document.getElementById('rank-content'));
+        rDrag.init(document.getElementById('hiChat-content'));
     }
     window.onResize = function(){
         //var obj = document.getElementById('tt1');
         //rDrag.init(obj);
-        rDrag.init(document.getElementById('szwz-rank'));
-        rDrag.init(document.getElementById('szwz-chat-content'));
-        rDrag.init(document.getElementById('szwz-blackpacket'));
-        rDrag.init(document.getElementById('qr-code'));
+        rDrag.init(document.getElementById('adv-content1'));
+        rDrag.init(document.getElementById('adv-content2'));
+        rDrag.init(document.getElementById('welcome-content'));
+        rDrag.init(document.getElementById('chat-content'));
+        rDrag.init(document.getElementById('rank-content'));
+        rDrag.init(document.getElementById('hiChat-content'));
     }
+
+    /*侧栏拖放*/
+    var eleChat = $("#main-content")[0], eleDrags = $(".draglist"), lDrags = eleDrags.length, eleDrag = null;
+    for(var i = 0; i < lDrags; i += 1){
+        eleDrags[i].onselectstart = function(){
+            return false;
+        };
+        eleDrags[i].ondragstart = function(ev){
+            /*拖拽开始*/
+            //拖拽效果
+            ev.dataTransfer.effectAllowed = "move";
+            ev.dataTransfer.setData("text", ev.target.id);
+            eleDrag = ev.target;
+            return true;
+        };
+        eleDrags[i].ondragend = function(ev){
+            /*拖拽结束*/
+            var dargeleX = ev.clientX;
+            var dargeleY = ev.clientY;
+            var screen_width = document.body.offsetWidth;
+            var screen_height = document.body.offsetHeight;
+            if(dargeleX<=0){
+                dargeleX=0;
+            }
+            if(dargeleY<=0){
+                dargeleY=0;
+            }
+            ev.dataTransfer.clearData("text");
+            switch(ev.target.id){
+                case "drag-rank":
+                    $('.rank-content').removeClass('hide');
+                    if(screen_width <= dargeleX + $('.rank-content').outerWidth()){
+                        dargeleX = screen_width - $('.rank-content').outerWidth();
+                    }
+                    if(screen_height <= dargeleY + $('.rank-content').outerHeight()){
+                        dargeleY = screen_height - $('.rank-content').outerHeight();
+                    }
+                        $('.rank-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+                case "drag-chat":
+                    $('.chat-content').removeClass('hide');
+                    if(screen_width <= dargeleX + $('.chat-content').outerWidth()){
+                        dargeleX = screen_width - $('.chat-content').outerWidth();
+                    }
+                    if(screen_height <= dargeleY + $('.chat-content').outerHeight()){
+                        dargeleY = screen_height - $('.chat-content').outerHeight();
+                    }
+                    $('.chat-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+                case "drag-qrcode":
+                    $('.hiChat-content').removeClass('hide');
+                    if(screen_width <= dargeleX + $('.hiChat-content').outerWidth()){
+                        dargeleX = screen_width - $('.hiChat-content').outerWidth();
+                    }
+                    if(screen_height <= dargeleY + $('.hiChat-content').outerHeight()){
+                        dargeleY = screen_height - $('.hiChat-content').outerHeight();
+                    }
+                    $('.hiChat-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+                case "drag-welcome":
+                    $('.welcome-content').removeClass('hide');
+                    if(screen_width <= dargeleX + $('.welcome-content').outerWidth()){
+                        dargeleX = screen_width - $('.welcome-content').outerWidth();
+                    }
+                    if(screen_height <= dargeleY + $('.welcome-content').outerHeight()){
+                        dargeleY = screen_height - $('.welcome-content').outerHeight();
+                    }
+                    $('.welcome-content').css({
+                        left : dargeleX,
+                        top : dargeleY
+                    });
+                    break;
+            }
+            eleDrag = null;
+            return false
+        };
+    }
+    eleChat.ondragover = function(ev){
+        /*拖拽元素在目标元素头上移动的时候*/
+        ev.preventDefault();
+        return true;
+    };
+    eleChat.ondragenter = function(ev){
+        /*拖拽元素进入目标元素头上的时候*/
+        return true;
+    }
+    eleChat.ondrop = function(ev){
+        /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
+        if(eleDrag){
+            /*...*/
+        }
+    }
+
+    /*屏幕设置切换*/
+    $(function(){
+        $('.panel-list').find('li').click(function(){
+            var panel_list_index = $(this).index();
+            $('.panel-list').find('li').removeClass('active');
+            $(this).addClass('active');
+            $('.panel-setting-input > div').addClass('hide').eq(panel_list_index).removeClass('hide');
+        })
+    })
+    $('.screen-setting-panel').find('.icon-guanbi').click(function(){
+        $(this).parents('.screen-setting-panel').addClass('hide');
+        $('#onOff-setting').css({
+            background : 'transparent'
+        })
+    })
 </script>
 </body>
 </html>
