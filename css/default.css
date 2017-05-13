@@ -53,7 +53,8 @@ background-color:#f5f5f5;
 .flex{display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */ display: -moz-box; /* Firefox 17- */ display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */ display: -moz-flex; /* Firefox 18+ */ display: -ms-flexbox; /* IE 10 */ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ -webkit-flex-direction: ro}
 .textOverflow{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .icon-guanbi{ cursor: pointer; }
-.hide{ display: none; }
+.hide{ display: none !important; }
+.move-div{ box-sizing: border-box; }
 
 /*侧栏内容*/
 .wrap{ height:100%; width:100%; }
@@ -163,18 +164,18 @@ transform: scale(0);
 }
 .ctrl-move-onOff{ font-size: 22px; position: absolute; bottom: 10px; width: 100%; color: #FFF; padding-left: 20px; box-sizing: border-box; }
 /*聊天层内容*/
-.main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: 100%; }
+.main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; overflow: hidden; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: 100%; }
 .redpacket-content{ position: absolute; width: 30%; height: 200px; border: 2px dashed red; text-align: right; }
 
 /*土豪榜*/
-.rank-content{ position: absolute; overflow: hidden; background: #1b1b1b; border-radius: 20px; width: 350px; z-index: 4; }
+.rank-content{ position: absolute; overflow: auto; background: #1b1b1b; border-radius: 20px; z-index: 4; }
 .rank-content .rank-top-msg{ width: 100%; margin: 0 auto; padding: 20px; box-sizing: border-box; align-items: center; justify-content: center; -webkit-align-items: center; -webkit-justify-content: center; }
 .rank-content .rank-top-msg img{ width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; flex-shrink: 0;-webkit-flex-shrink: 0; }
 .rank-content .rank-top-msg div{ text-align: center; width: 100%; }
 .rank-content .rank-top-msg h3{ font-size: 24px; color: #FFF; font-weight: bold; width: 100%; }
 .rank-content .rank-top-msg p{ font-size: 18px; color: #FFF; }
 .rank-content > span{ color: #919191; display: block; width: 100%; text-align: center; padding: 10px 0; }
-.rank-content ul{ width: 100%; }
+.rank-content ul{ width: 100%; overflow: auto; }
 .rank-content ul li{ width: 100%; padding: 0 20px; box-sizing: border-box; height: 60px; position: relative; z-index: 1; align-items: center; -webkit-align-items: center; }
 .rank-content ul li .bg-percentage{ position: absolute; left: 0; top: 0; height: 100%; z-index: 0; }
 .rank-content ul li .rank-user-status{ position: relative; width: 100%; font-size: 24px; align-items:center; -webkit-align-items: center; color: #FFF; z-index: 1; }
@@ -189,7 +190,7 @@ transform: scale(0);
 .rank-content ul li:nth-of-type(6) .bg-percentage{  background: #FFA1DB; }
 
 /*二维码*/
-.hiChat-content{ position: absolute; border-radius: 20px; width: 350px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
+.hiChat-content{ position: absolute; border-radius: 20px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
 .hiChat-content .qrcode-imgwrap{ width: 130px; height: 130px; margin-right: 10px; border-radius: 10px; padding: 8px; background: #FFF; box-sizing: border-box; }
 .hiChat-content .qrcode-imgwrap img{ width:100%; }
 .hiChat-content .hiChat-text{ font-size: 0; color: #FFF; text-align: center; }
@@ -198,10 +199,11 @@ transform: scale(0);
 .hiChat-content .hiChat-text span{ display: block; font-size: 16px; margin-top: 5px; border-bottom: 1px solid #FFF; font-style: italic; }
 
 /*欢迎语层*/
-.welcome-content{ position: absolute; width: 800px; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
+.welcome-content{ position: absolute; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
 
 /*聊天层*/
-.chat-content{ position: absolute; width: 800px; height: 800px; overflow: auto; }
+.chat-content{ position: absolute; }
+.message-content-wrap{ height: 100%; overflow: auto; }
 .chat-content .message-content{ position: relative; width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; border-radius: 50px; background: linear-gradient(to right,#e04fd2,#25e2e0); align-items: flex-start; }
 .chat-content .message-content:last-of-type{ margin-bottom: 0; }
 .chat-content .message-content > img{ height: 80px; width: 80px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
@@ -213,9 +215,9 @@ transform: scale(0);
 .chat-content .pa-hasimg-content .message-user-info > img{ margin-top: 10px; min-height: 25%; max-width: 80%; max-height: 280px; }
 
 /*广告层*/
-.adv-content{ position: absolute; width:300px;border-radius: 10px 10px 0 0; background-color: #1b1b1b; }
-.adv-content h3{ width: 92%; margin: 0 auto; color: #FFF; text-align: center; border-bottom: 2px solid #535353; font-size: 24px; padding: 10px 0; margin-bottom: 5px; }
-.adv-content img{ width: 100%; }
+.adv-content{ position: absolute; border-radius: 10px 10px 0 0; background-color: #1b1b1b; }
+.adv-content > h3{ width: 92%; margin: 0 auto; color: #FFF; text-align: center; border-bottom: 2px solid #535353; font-size: 24px; padding: 10px 0; margin-bottom: 5px; }
+.adv-content img{ width: 100%; height: 100%; }
 
 /*大屏幕设置*/
 .screen-setting-panel{ overflow: hidden; position: absolute; width: 700px; height: 500px; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background-color: #1b1b1b; border-radius: 5px; z-index: 1; }
@@ -240,3 +242,33 @@ transform: scale(0);
 .panel-setting-input .screen-setting .rp-set span,.panel-setting-input .screen-setting .screen-website span,.panel-setting-input .screen-setting .programme-name span{ display: block; }
 .panel-setting-input .screen-setting .rp-set select{  font-size: 18px; margin-top: 10px; text-align: center; }
 .panel-setting-input .screen-setting .screen-website input,.panel-setting-input .screen-setting .programme-name input{ border: none; font-size: 16px; border-radius: 5px; margin-top: 10px;padding: 5px 10px; }
+
+/*移动层标题、设置移入显示样式*/
+.moveDiv-nameIco{ position: absolute; top: -60px; left: 0; height: 60px; font-size: 0; width: 100%; justify-content: space-between; align-items: flex-end; }
+.moveDiv-nameIco h3{ color: #FFF; font-size: 26px; }
+.moveDiv-nameIco span{ display: inline-block; vertical-align: middle; background: #FFF; cursor: pointer; color: #000; width: 25px; height: 25px; margin-left: 10px; text-align: center; line-height: 25px; font-weight: bold; font-size: 16px; }
+.moveDiv-nameIco span:first-of-type{ margin-left: 0; }
+.setClose-ico{ text-align: right; }
+.setClose-ico p{ display: block; }
+.moveDiv-nameIco .setClose-ico p i{ font-size: 14px; margin-bottom: 3px; display: inline-block; margin-right: 5px; color: #FFF; background:#393939; padding: 5px 10px; border-radius: 5px; }
+.moveDiv-nameIco .setClose-ico p i:last-of-type{ margin-right: 0; cursor: n-resize }
+
+/*移动层配置*/
+.moveDiv-config{ background: rgba(255,255,255,0.3); width: 100%; height: 100%; position: fixed; left: 0; top: 0; justify-content: center; align-items: center; }
+.moveDiv-config > div{ background: #222222; }
+.moveDiv-config > div .settint-panel-title span{ margin-right: 100px; }
+.rank-config,.chat-config{ border-radius: 5px; overflow: hidden; }
+.rank-config .rank-config-content > div,.chat-config .chat-config-content > div{ margin-bottom: 15px; }
+.rank-config .rank-config-content > div:last-of-type,.chat-config .chat-config-content > div:last-of-type{ margin-bottom: 0; }
+.rank-config-content,.chat-config-content{ padding: 25px; }
+.rank-config .rank-config-content > div > span,.chat-config .chat-config-content > div > span,.fontSize span{ color: #FFF; padding-right: 25px; font-size: 20px; }
+.rank-title input{ border: none; border-radius: 5px; font-size: 18px; padding: 5px 10px; width: 200px; box-sizing: border-box; }
+.update-fre,.width-per,.version{ color: #FFF; font-size: 18px; }
+.update-fre label span,.update-fre label input,.version label span,.version label input{ display: inline-block; vertical-align: middle; }
+.update-fre label input,.version label input{ margin-left: 20px; width: 16px; height: 16px; }
+.update-fre label:first-of-type input,.version label:first-of-type input{ margin-left: 0; }
+.show-peoplenum select{ font-size: 18px; width: 50px; }
+.width-per input{ border: none; font-size: 20px; width: 50px; }
+.fontSize p{ font-size: 18px; color: #FFF; margin-bottom: 10px; }
+.fontSize input{ width: 250px; }
+
