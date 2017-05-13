@@ -35,63 +35,106 @@
             </div>
         </div>
         <div class="ctrl-move-onOff">
-            <span>屏幕锁定</span> <label class="label-switch"> <input id="isMove" type="checkbox" checked>
-            <div class="checkbox"></div>
-        </label>
+            <span>屏幕锁定</span>
+            <label class="label-switch"> <input id="isMove" type="checkbox" checked>
+                <div class="checkbox"></div>
+            </label>
         </div>
         <span id="control-element" class="iconfont icon-aside-right"></span>
     </aside>
     <div class="main-content" id="main-content" style="background-image: url(images/bg.jpg);">
-        <div class="adv-content hide" id="adv-content1" style=" top: 50px; left: 30px;">
+        <div class="adv-content move-div hide" id="adv-content1" style=" top: 50px; left: 30px; width:300px; height: 320px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>广告位</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span>
+                    <span class="iconfont icon-guanbi"></span>
+                </div>
+            </div>
             <h3>派对预告/酒水优惠</h3>
             <img src="images/tx.jpg" alt="">
         </div>
-        <div class="adv-content hide" id="adv-content2" style=" top: 500px; left: 30px;">
+        <div class="adv-content move-div hide" id="adv-content2" style=" top: 500px; left: 30px; width:300px; height: 320px;">
+            <div class="moveDiv-nameIco hide flex">
+            <h3>广告位</h3>
+            <div class="setClose-ico">
+                <p class="hide"><i>设置</i><i>删除</i></p>
+                <span class="iconfont icon-ordinaryset"></span>
+                <span class="iconfont icon-guanbi"></span>
+            </div>
+        </div>
             <h3>广告招商</h3>
             <img src="images/tx1.jpg" alt="">
         </div>
-        <div class="welcome-content hide" id="welcome-content" style=" left: 600px;">
+        <div class="welcome-content move-div hide" id="welcome-content" style=" left: 600px; top: 0px; width: 800px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>欢迎语</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span>
+                    <span class="iconfont icon-guanbi"></span>
+                </div>
+            </div>
             欢迎光临SHOW8BAR
         </div>
-        <div class="chat-content hide" id="chat-content" style="left: 600px; top: 100px; ">
-            <div class="message-content flex" style=" background: linear-gradient(to right,#f404c9,#333397); ">
-                <img src="images/tx2.jpg" alt="">
-                <div class="message-user-info">
-                    <i class="textOverflow">ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+        <div class="chat-content move-div hide" id="chat-content" style="left: 600px; top: 100px; width: 800px; height: 800px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>聊天层</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span>
+                    <span class="iconfont icon-guanbi"></span>
                 </div>
-                <span class="send-time">03-02 20:30</span>
             </div>
-            <div class="message-content flex" style=" background: linear-gradient(to right,#b545f2,#f96abc);">
-                <img src="images/tx3.jpg" alt="">
-                <div class="message-user-info">
-                    <i class="textOverflow">没控啊</i> <span>哈哈哈哈哈奥或或或或或或</span>
+            <div class="message-content-wrap">
+                <div class="message-content flex" style=" background: linear-gradient(to right,#f404c9,#333397); ">
+                    <img src="images/tx2.jpg" alt="">
+                    <div class="message-user-info">
+                        <i class="textOverflow">ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    </div>
+                    <span class="send-time">03-02 20:30</span>
                 </div>
-                <span class="send-time">03-02 20:30</span>
-            </div>
-            <div class="message-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
-                <img src="images/tx4.jpg" alt="">
-                <div class="message-user-info">
-                    <i class="textOverflow">对面太肉了</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                <div class="message-content flex" style=" background: linear-gradient(to right,#b545f2,#f96abc);">
+                    <img src="images/tx3.jpg" alt="">
+                    <div class="message-user-info">
+                        <i class="textOverflow">没控啊</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    </div>
+                    <span class="send-time">03-02 20:30</span>
                 </div>
-                <span class="send-time">03-02 20:30</span>
-            </div>
-            <div class="message-content pa-hasimg-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
-                <img src="images/tx5.jpg" alt="">
-                <div class="message-user-info">
-                    <i class="textOverflow">中路一波推了</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
-                    <img src="images/tx.jpg" alt="">
+                <div class="message-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
+                    <img src="images/tx4.jpg" alt="">
+                    <div class="message-user-info">
+                        <i class="textOverflow">对面太肉了</i> <span>哈哈哈哈哈奥或或或或或或</span>
+                    </div>
+                    <span class="send-time">03-02 20:30</span>
                 </div>
-                <span class="send-time">03-02 20:30</span>
-            </div>
-            <div class="message-content pa-hastext-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
-                <img src="images/tx5.jpg" alt="">
-                <div class="message-user-info">
-                    <i>ailisi</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
+                <div class="message-content pa-hasimg-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
+                    <img src="images/tx5.jpg" alt="">
+                    <div class="message-user-info">
+                        <i class="textOverflow">中路一波推了</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
+                        <img src="images/tx.jpg" alt="">
+                    </div>
+                    <span class="send-time">03-02 20:30</span>
                 </div>
-                <span class="send-time">03-02 20:30</span>
+                <div class="message-content pa-hastext-content flex" style=" background: linear-gradient(to right,#7b21ff,#41f2ae);">
+                    <img src="images/tx5.jpg" alt="">
+                    <div class="message-user-info">
+                        <i>ailisi</i> <span>重金霸屏20秒：嗨起来吧，Every Body</span>
+                    </div>
+                    <span class="send-time">03-02 20:30</span>
+                </div>
             </div>
         </div>
-        <div class="rank-content hide" id="rank-content" style="right: 20px; top: 50px;">
+        <div class="rank-content move-div hide" id="rank-content" style="left: 1550px; top: 50px;  width: 350px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>排行榜</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span>
+                    <span class="iconfont icon-guanbi"></span>
+                </div>
+            </div>
             <div class="rank-top-msg flex">
                 <img src="images/tx.jpg" alt="">
                 <div class="textOverflow">
@@ -138,7 +181,15 @@
             </ul>
             <span>嗨撩技术支持</span>
         </div>
-        <div class="hiChat-content flex hide" id="hiChat-content" style="right: 20px; top:600px;">
+        <div class="hiChat-content flex move-div hide" id="hiChat-content" style="left: 1550px; top:600px; width: 350px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>二维码层</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span>
+                    <span class="iconfont icon-guanbi"></span>
+                </div>
+            </div>
             <div class="qrcode-imgwrap">
                 <img src="images/qrcode.png" alt="">
             </div>
@@ -213,6 +264,66 @@
                 </div>
             </div>
         </div>
+        <div class="moveDiv-config flex">
+            <div class="rank-config hide">
+                <div class="settint-panel-title">
+                    <span>排行榜设置</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="rank-config-content">
+                    <div class="rank-title">
+                        <span>标题</span>
+                        <input type="text"/>
+                    </div>
+                    <div class="update-fre">
+                        <span>更新频率</span>
+                        <label>
+                            <input type="radio"/>
+                            <span>5分钟</span>
+                        </label>
+                        <label>
+                            <input type="radio"/>
+                            <span>10分钟</span>
+                        </label>
+                    </div>
+                    <div class="show-peoplenum">
+                        <span>显示人数</span>
+                        <select>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div class="width-per">
+                        <span>宽度百分比</span>
+                        <input type="number" min="0" max="100"/>%
+                    </div>
+                </div>
+            </div>
+            <div class="chat-config">
+                <div class="settint-panel-title">
+                    <span>聊天层设置</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="chat-config-content">
+                    <div class="version">
+                        <span>版本</span>
+                        <label>
+                            <input type="radio"/>
+                            <span>弹幕版</span>
+                        </label>
+                        <label>
+                            <input type="radio"/>
+                            <span>炫彩版</span>
+                        </label>
+                    </div>
+                    <div class="fontSize">
+                        <p><span>字体大小</span>18px</p>
+                        <input type="range"/>
+                    </div>
+                    <div class="message-scroll">
+                        <span>消息滚动</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -256,6 +367,78 @@
         }
         $('#screen-setting-panel').removeClass('hide');
     })
+    $('#isMove').click(function(){
+        if(!$(this).is(':checked')){
+            $('.move-div').hover(function(){
+                $(this).css({
+                    border: '2px dashed #FFF'
+                })
+                $(this).find('.moveDiv-nameIco').removeClass('hide')
+            },function(){
+                $(this).css({
+                    border: 'none'
+                })
+                $(this).find('.moveDiv-nameIco').addClass('hide')
+            });
+        }else {
+            $('.move-div').unbind();
+        }
+    })
+    $('.setClose-ico').find('span').hover(function(){
+        $('.setClose-ico').find('p').removeClass('hide')
+    },function(){
+        $('.setClose-ico').find('p').addClass('hide')
+    })
+    /*拖动改变高度、宽度*/
+    function changeWh(dragObj){
+        var xborderPoi,yborderPoi,isResizing=false,changeW;
+        $(dragObj).on('mousedown',function(e){
+            isResizing=true;
+            xborderPoi=$(this).width()+$(this).offset().left;
+            yborderPoi=$(this).height()+$(this).offset().top;
+        })
+        $(document).on('mousemove',function(e){
+            xborderPoi=$(dragObj).width()+$(dragObj).offset().left;
+            yborderPoi=$(dragObj).height()+$(dragObj).offset().top;
+            if(e.clientX >= xborderPoi - 5){
+                $(dragObj).css({
+                    cursor: 'w-resize'
+                })
+                if (!isResizing)
+                    return;
+
+                changeW = e.clientX - $(dragObj).offset().left;
+                $(dragObj).width(changeW);
+            }else {
+                $(dragObj).css({
+                    cursor: 'auto'
+                })
+            }
+            if(e.clientY >= yborderPoi - 5){
+                $(dragObj).css({
+                    cursor: 'n-resize'
+                })
+                if (!isResizing)
+                    return;
+
+                changeH = e.clientY - $(dragObj).offset().top;
+                $(dragObj).height(changeH);
+            }else {
+                $(dragObj).css({
+                    cursor: 'auto'
+                })
+            }
+        }).on('mouseup', function (e) {
+            isResizing = false;
+        })
+    }
+    changeWh('#adv-content1');
+    changeWh('#adv-content2');
+    changeWh('#chat-content');
+    changeWh('#welcome-content');
+    changeWh('#rank-content');
+    changeWh('#hiChat-content');
+
     /*屏幕功能层移动*/
     var rDrag = {
         o : null,
@@ -272,7 +455,12 @@
             if(!$('#isMove').is(':checked')){
                 document.onmousemove = rDrag.move;
             } else {
-                return false;
+                changeWh('#adv-content1');
+                changeWh('#adv-content2');
+                changeWh('#adv-content2');
+                changeWh('#welcome-content');
+                changeWh('#rank-content');
+                changeWh('#hiChat-content');
             }
             l = rDrag.o.style.left;
             t = rDrag.o.style.top;
@@ -300,7 +488,6 @@
             }
             rDrag.o.style.left = oLeft + 'px';
             rDrag.o.style.top = oTop + 'px';
-            rDrag.o.style.border = '2px dashed #f8cb00';
         },
         end : function(e){
             e = rDrag.fixEvent(e);
@@ -315,7 +502,7 @@
             if(!e){
                 e = window.event;
                 e.target = e.srcElement;
-                e.layerX = e.offsetX;
+                e.layerX= e.offsetX;
                 e.layerY = e.offsetY;
             }
             return e;
