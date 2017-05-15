@@ -34,9 +34,15 @@
                 <span class="iconfont icon-shezhi"></span> 大屏幕设置
             </div>
         </div>
+        <div class="ctrl-scale-onOff">
+            <span>屏幕缩放</span> <label class="label-switch"> <input id="isScale" type="checkbox">
+            <div class="checkbox"></div>
+        </label>
+        </div>
         <div class="ctrl-move-onOff">
-            <span>屏幕锁定</span>
-            <label class="label-switch"> <input id="isMove" type="checkbox" checked>
+            <span>屏幕拖动</span>
+            <label class="label-switch">
+                <input id="isMove" type="checkbox">
                 <div class="checkbox"></div>
             </label>
         </div>
@@ -48,8 +54,7 @@
                 <h3>广告位</h3>
                 <div class="setClose-ico">
                     <p class="hide"><i>设置</i><i>删除</i></p>
-                    <span class="iconfont icon-ordinaryset"></span>
-                    <span class="iconfont icon-guanbi"></span>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
             <h3>派对预告/酒水优惠</h3>
@@ -57,34 +62,31 @@
         </div>
         <div class="adv-content move-div hide" id="adv-content2" style=" top: 500px; left: 30px; width:300px; height: 320px;">
             <div class="moveDiv-nameIco hide flex">
-            <h3>广告位</h3>
-            <div class="setClose-ico">
-                <p class="hide"><i>设置</i><i>删除</i></p>
-                <span class="iconfont icon-ordinaryset"></span>
-                <span class="iconfont icon-guanbi"></span>
+                <h3>广告位</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
+                </div>
             </div>
-        </div>
             <h3>广告招商</h3>
             <img src="images/tx1.jpg" alt="">
         </div>
-        <div class="welcome-content move-div hide" id="welcome-content" style=" left: 600px; top: 0px; width: 800px;">
+        <div class="welcome-content move-div hide" data-config="4" id="welcome-content" style=" left: 600px; top: 0px; width: 800px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>欢迎语</h3>
                 <div class="setClose-ico">
                     <p class="hide"><i>设置</i><i>删除</i></p>
-                    <span class="iconfont icon-ordinaryset"></span>
-                    <span class="iconfont icon-guanbi"></span>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
             欢迎光临SHOW8BAR
         </div>
-        <div class="chat-content move-div hide" id="chat-content" style="left: 600px; top: 100px; width: 800px; height: 800px;">
+        <div class="chat-content move-div hide" data-config="2" id="chat-content" style="left: 600px; top: 100px; width: 800px; height: 500px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>聊天层</h3>
                 <div class="setClose-ico">
                     <p class="hide"><i>设置</i><i>删除</i></p>
-                    <span class="iconfont icon-ordinaryset"></span>
-                    <span class="iconfont icon-guanbi"></span>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
             <div class="message-content-wrap">
@@ -126,68 +128,68 @@
                 </div>
             </div>
         </div>
-        <div class="rank-content move-div hide" id="rank-content" style="left: 1550px; top: 50px;  width: 350px;">
+        <div class="rank-content move-div" data-config="1" id="rank-content" style="left: 1550px; top: 50px;  width: 350px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>排行榜</h3>
                 <div class="setClose-ico">
                     <p class="hide"><i>设置</i><i>删除</i></p>
-                    <span class="iconfont icon-ordinaryset"></span>
-                    <span class="iconfont icon-guanbi"></span>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
-            <div class="rank-top-msg flex">
-                <img src="images/tx.jpg" alt="">
-                <div class="textOverflow">
-                    <h3 class="textOverflow">SHOW8BAR排行榜</h3>
-                    <p>实时更新·Live Update</p>
+            <div class="rank-content-wrap">
+                <div class="rank-top-msg flex">
+                    <img src="images/tx.jpg" alt="">
+                    <div class="textOverflow">
+                        <h3 class="textOverflow">SHOW8BAR排行榜</h3>
+                        <p>实时更新·Live Update</p>
+                    </div>
                 </div>
+                <ul>
+                    <li class="flex">
+                        <div class="bg-percentage" style="width: 100%;"></div>
+                        <div class="rank-user-status flex">
+                            <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                            <span class="iconfont icon-zuanshi">1212</span>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="bg-percentage" style="width: 85%;"></div>
+                        <div class="rank-user-status flex">
+                            <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                            <span class="iconfont icon-zuanshi">1212</span>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="bg-percentage" style="width: 60%;"></div>
+                        <div class="rank-user-status flex">
+                            <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                            <span class="iconfont icon-zuanshi">1212</span>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="bg-percentage" style="width: 40%;"></div>
+                        <div class="rank-user-status flex">
+                            <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                            <span class="iconfont icon-zuanshi">1212</span>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="bg-percentage" style="width: 20%;"></div>
+                        <div class="rank-user-status flex">
+                            <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
+                            <span class="iconfont icon-zuanshi">1212</span>
+                        </div>
+                    </li>
+                </ul>
+                <span>嗨撩技术支持</span>
             </div>
-            <ul>
-                <li class="flex">
-                    <div class="bg-percentage" style="width: 100%;"></div>
-                    <div class="rank-user-status flex">
-                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
-                        <span class="iconfont icon-zuanshi">1212</span>
-                    </div>
-                </li>
-                <li class="flex">
-                    <div class="bg-percentage" style="width: 85%;"></div>
-                    <div class="rank-user-status flex">
-                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
-                        <span class="iconfont icon-zuanshi">1212</span>
-                    </div>
-                </li>
-                <li class="flex">
-                    <div class="bg-percentage" style="width: 60%;"></div>
-                    <div class="rank-user-status flex">
-                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
-                        <span class="iconfont icon-zuanshi">1212</span>
-                    </div>
-                </li>
-                <li class="flex">
-                    <div class="bg-percentage" style="width: 40%;"></div>
-                    <div class="rank-user-status flex">
-                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
-                        <span class="iconfont icon-zuanshi">1212</span>
-                    </div>
-                </li>
-                <li class="flex">
-                    <div class="bg-percentage" style="width: 20%;"></div>
-                    <div class="rank-user-status flex">
-                        <img src="images/tx.jpg" alt=""> <i class="textOverflow">borro</i>
-                        <span class="iconfont icon-zuanshi">1212</span>
-                    </div>
-                </li>
-            </ul>
-            <span>嗨撩技术支持</span>
         </div>
-        <div class="hiChat-content flex move-div hide" id="hiChat-content" style="left: 1550px; top:600px; width: 350px;">
+        <div class="hiChat-content flex move-div hide" data-config="3" id="hiChat-content" style="left: 1550px; top:600px; width: 350px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>二维码层</h3>
                 <div class="setClose-ico">
                     <p class="hide"><i>设置</i><i>删除</i></p>
-                    <span class="iconfont icon-ordinaryset"></span>
-                    <span class="iconfont icon-guanbi"></span>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
             <div class="qrcode-imgwrap">
@@ -264,70 +266,147 @@
                 </div>
             </div>
         </div>
-        <div class="moveDiv-config flex">
-            <div class="rank-config hide">
+        <div class="moveDiv-config flex hide">
+            <div data-config="1" class="rank-config hide">
                 <div class="settint-panel-title">
                     <span>排行榜设置</span> <i class="iconfont icon-guanbi"></i>
                 </div>
                 <div class="rank-config-content">
                     <div class="rank-title">
-                        <span>标题</span>
-                        <input type="text"/>
+                        <span>标题</span> <input type="text"/>
                     </div>
                     <div class="update-fre">
-                        <span>更新频率</span>
-                        <label>
-                            <input type="radio"/>
-                            <span>5分钟</span>
-                        </label>
-                        <label>
-                            <input type="radio"/>
-                            <span>10分钟</span>
-                        </label>
+                        <span>更新频率</span> <label> <input type="radio"/> <span>5分钟</span> </label> <label>
+                        <input type="radio"/> <span>10分钟</span> </label>
                     </div>
                     <div class="show-peoplenum">
                         <span>显示人数</span>
                         <select>
-                            <option>5</option>
-                            <option>10</option>
+                            <option>5</option> <option>10</option>
                         </select>
                     </div>
                     <div class="width-per">
-                        <span>宽度百分比</span>
-                        <input type="number" min="0" max="100"/>%
+                        <span>宽度百分比</span> <input type="number" min="0" max="100"/>%
                     </div>
                 </div>
             </div>
-            <div class="chat-config">
+            <div data-config="2" class="chat-config hide">
                 <div class="settint-panel-title">
                     <span>聊天层设置</span> <i class="iconfont icon-guanbi"></i>
                 </div>
                 <div class="chat-config-content">
                     <div class="version">
-                        <span>版本</span>
-                        <label>
-                            <input type="radio"/>
-                            <span>弹幕版</span>
-                        </label>
-                        <label>
-                            <input type="radio"/>
-                            <span>炫彩版</span>
-                        </label>
+                        <span>版本</span> <label> <input type="radio"/> <span>弹幕版</span> </label> <label>
+                        <input type="radio"/> <span>炫彩版</span> </label>
                     </div>
                     <div class="fontSize">
                         <p><span>字体大小</span>18px</p>
                         <input type="range"/>
                     </div>
                     <div class="message-scroll">
-                        <span>消息滚动</span>
-                        <label class="label-switch">
-                            <input type="checkbox" checked>
-                            <div class="checkbox"></div>
-                        </label>
+                        <span>消息滚动</span> <label class="label-switch"> <input type="checkbox" checked>
+                        <div class="checkbox"></div>
+                    </label>
                     </div>
                     <div class="scroll-time">
                         <p><span>滚动间隔时间</span>5秒</p>
                         <input type="range"/>
+                    </div>
+                </div>
+            </div>
+            <div data-config="3" class="qrcode-config hide">
+                <div class="settint-panel-title">
+                    <span>二维码属性</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="qrcode-config-content">
+                    <div class="img-width">
+                        <span>图片宽度（倍数）</span>
+                        <select>
+                            <option>0.5</option>
+                            <option>1.5</option>
+                        </select>
+                    </div>
+                    <div class="img-height">
+                        <span>图片高度（倍数）</span>
+                        <select>
+                            <option>0.5</option>
+                            <option>1.5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div data-config="4" class="welecome-config hide">
+                <div class="settint-panel-title">
+                    <span>欢迎语属性</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="welecome-config-content">
+                    <div class="welecome-text">
+                        <span>欢迎语</span> <input type="text"/>
+                    </div>
+                    <div class="welecome-fontsize">
+                        <span>字体大小</span>
+                        <select>
+                            <option>30</option>
+                            <option>40</option>
+                        </select>
+                    </div>
+                    <div class="width-per">
+                        <span>宽度百分比</span> <input type="number" min="0" max="100"/>%
+                    </div>
+                    <div class="height-per">
+                        <span>高度百分比</span> <input type="number" min="0" max="100"/>%
+                    </div>
+                </div>
+            </div>
+            <div data-config="5" class="carousel-config hide">
+                <div class="settint-panel-title">
+                    <span>图片轮播属性</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="carousel-config-content">
+                    <div class="carousel-fre flex">
+                        <span>轮播频率</span>
+                        <select>
+                            <option>5秒</option>
+                            <option>10秒</option>
+                        </select>
+                    </div>
+                    <div class="carousel-style flex">
+                        <span>轮播频率</span>
+                        <select>
+                            <option>0.5</option>
+                            <option>1.5</option>
+                        </select>
+                    </div>
+                    <div class="width-per">
+                        <span>宽度百分比</span> <input type="number" min="0" max="100"/>%
+                    </div>
+                    <div class="height-per">
+                        <span>高度百分比</span> <input type="number" min="0" max="100"/>%
+                    </div>
+                </div>
+            </div>
+            <div data-config="6" class="logo-config hide">
+                <div class="settint-panel-title">
+                    <span>logo层属性设置</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="logo-config-content">
+                    <div class="logo-upload flex">
+                        <span>logo上传</span>
+                        <i>上传</i>
+                    </div>
+                    <div class="img-width">
+                        <span>图片宽度（倍数）</span>
+                        <select>
+                            <option>0.5</option>
+                            <option>1.5</option>
+                        </select>
+                    </div>
+                    <div class="img-height">
+                        <span>图片高度（倍数）</span>
+                        <select>
+                            <option>0.5</option>
+                            <option>1.5</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -350,19 +429,13 @@
             }
         })
     })
-</script>
-<script>
-    /*获取拖动div位置及宽高*/
-    function getDivX(tag_Div){
-        var targetLeft = $(tag_Div).css('left');
-        var targetTop = $(tag_Div).css('top');
-        var targetWidth = $(tag_Div).width();
-        var targetHeight = $(tag_Div).height();
-        var rightPoint = targetWidth + parseInt(targetLeft);
-        var bottomPoint = targetHeight + parseInt(targetTop);
-
-    }
-    getDivX('.chat-content');
+    $('.move-div .moveDiv-nameIco').find('.icon-ordinaryset').click(function(){
+        var moveDiv_dc=$(this).parents('.move-div').attr("data-config");
+        $('.moveDiv-config').removeClass('hide');
+        if($('.moveDiv-config').find('div').attr('data-config')==moveDiv_dc){
+            alert(1);
+        }
+    })
 </script>
 <script>
     var onOff = false;
@@ -375,78 +448,101 @@
         }
         $('#screen-setting-panel').removeClass('hide');
     })
+
     $('#isMove').click(function(){
-        if(!$(this).is(':checked')){
+        if($(this).is(':checked')){
+            $('#isScale').attr("disabled",true);
             $('.move-div').hover(function(){
                 $(this).css({
-                    border: '2px dashed #FFF'
+                    border : '2px dashed #FFF'
                 })
                 $(this).find('.moveDiv-nameIco').removeClass('hide')
-            },function(){
+            }, function(){
                 $(this).css({
-                    border: 'none'
+                    border : 'none'
                 })
                 $(this).find('.moveDiv-nameIco').addClass('hide')
             });
-        }else {
+        } else {
             $('.move-div').unbind();
+            $('#isScale').attr("disabled",false);
         }
     })
     $('.setClose-ico').find('span').hover(function(){
         $('.setClose-ico').find('p').removeClass('hide')
-    },function(){
+    }, function(){
         $('.setClose-ico').find('p').addClass('hide')
     })
     /*拖动改变高度、宽度*/
-    function changeWh(dragObj){
-        var xborderPoi,yborderPoi,isResizing=false,changeW;
-        $(dragObj).on('mousedown',function(e){
-            isResizing=true;
-            xborderPoi=$(this).width()+$(this).offset().left;
-            yborderPoi=$(this).height()+$(this).offset().top;
+    var changeWh = function (dragObj){
+        var xborderPoi, yborderPoi, isResizing = false, changeW;
+        $(dragObj).on('mousedown', function(e){
+            isResizing = true;
+            xborderPoi = $(this).width() + $(this).offset().left;
+            yborderPoi = $(this).height() + $(this).offset().top;
         })
-        $(document).on('mousemove',function(e){
-            xborderPoi=$(dragObj).width()+$(dragObj).offset().left;
-            yborderPoi=$(dragObj).height()+$(dragObj).offset().top;
+        $(document).on('mousemove', function(e){
+            xborderPoi = $(dragObj).width() + $(dragObj).offset().left;
+            yborderPoi = $(dragObj).height() + $(dragObj).offset().top;
             if(e.clientX >= xborderPoi - 5){
-                $(dragObj).css({
-                    cursor: 'w-resize'
-                })
-                if (!isResizing)
+                if($('#isScale').is(':checked')){
+                    $(dragObj).css({
+                        cursor : 'w-resize'
+                    })
+                }
+                if(!isResizing)
                     return;
-
                 changeW = e.clientX - $(dragObj).offset().left;
-                $(dragObj).width(changeW);
-            }else {
+                $(dragObj).innerWidth(changeW);
+            } else {
                 $(dragObj).css({
-                    cursor: 'auto'
+                    cursor : 'auto'
                 })
             }
             if(e.clientY >= yborderPoi - 5){
-                $(dragObj).css({
-                    cursor: 'n-resize'
-                })
-                if (!isResizing)
+                if($('#isScale').is(':checked')){
+                    $(dragObj).css({
+                        cursor : 'n-resize'
+                    })
+                }
+                if(!isResizing)
                     return;
 
                 changeH = e.clientY - $(dragObj).offset().top;
-                $(dragObj).height(changeH);
-            }else {
+                $(dragObj).innerHeight(changeH);
+            } else {
                 $(dragObj).css({
-                    cursor: 'auto'
+                    cursor : 'auto'
                 })
             }
-        }).on('mouseup', function (e) {
+        }).on('mouseup', function(e){
             isResizing = false;
         })
     }
-    changeWh('#adv-content1');
-    changeWh('#adv-content2');
-    changeWh('#chat-content');
-    changeWh('#welcome-content');
-    changeWh('#rank-content');
-    changeWh('#hiChat-content');
 
+    $('#isScale').click(function(){
+        if($(this).is(':checked')){
+            $('#isMove').attr("disabled",true);
+            $('.move-div').hover(function(){
+                $(this).css({
+                    border : '2px dashed #FFF'
+                })
+            }, function(){
+                $(this).css({
+                    border : 'none'
+                })
+            });
+            changeWh('#adv-content1');
+            changeWh('#adv-content2');
+            changeWh('#chat-content');
+            changeWh('#welcome-content');
+            changeWh('#rank-content');
+            changeWh('#hiChat-content');
+        }else {
+            $('#isMove').attr("disabled",false);
+            $('.move-div').off();
+        }
+    })
     /*屏幕功能层移动*/
     var rDrag = {
         o : null,
@@ -460,15 +556,8 @@
             rDrag.o = o = this;
             o.x = e.clientX - rDrag.o.offsetLeft;
             o.y = e.clientY - rDrag.o.offsetTop;
-            if(!$('#isMove').is(':checked')){
+            if($('#isMove').is(':checked')){
                 document.onmousemove = rDrag.move;
-            } else {
-                changeWh('#adv-content1');
-                changeWh('#adv-content2');
-                changeWh('#adv-content2');
-                changeWh('#welcome-content');
-                changeWh('#rank-content');
-                changeWh('#hiChat-content');
             }
             l = rDrag.o.style.left;
             t = rDrag.o.style.top;
@@ -510,7 +599,7 @@
             if(!e){
                 e = window.event;
                 e.target = e.srcElement;
-                e.layerX= e.offsetX;
+                e.layerX = e.offsetX;
                 e.layerY = e.offsetY;
             }
             return e;
@@ -557,11 +646,11 @@
             var dargeleY = ev.clientY;
             var screen_width = document.body.offsetWidth;
             var screen_height = document.body.offsetHeight;
-            if(dargeleX<=0){
-                dargeleX=0;
+            if(dargeleX <= 0){
+                dargeleX = 0;
             }
-            if(dargeleY<=0){
-                dargeleY=0;
+            if(dargeleY <= 0){
+                dargeleY = 0;
             }
             ev.dataTransfer.clearData("text");
             switch(ev.target.id){
@@ -573,7 +662,7 @@
                     if(screen_height <= dargeleY + $('.rank-content').outerHeight()){
                         dargeleY = screen_height - $('.rank-content').outerHeight();
                     }
-                        $('.rank-content').css({
+                    $('.rank-content').css({
                         left : dargeleX,
                         top : dargeleY
                     });
@@ -652,6 +741,11 @@
         $('#onOff-setting').css({
             background : 'transparent'
         })
+    })
+    /*配置层关闭*/
+    $('.moveDiv-config').find('.icon-guanbi').click(function(){
+        $(this).parents('.moveDiv-config').addClass('hide');
+        $(this).parent().parent().addClass('hide');
     })
 </script>
 </body>
