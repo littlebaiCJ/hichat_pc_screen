@@ -90,7 +90,7 @@ vertical-align: middle;
 width: 52px;
 border-radius: 16px;
 box-sizing: border-box;
-height: 32px;
+height: 26px;
 position: relative;
 cursor: pointer;
 -ms-flex-item-align: center;
@@ -104,7 +104,7 @@ display: none;
 width: 52px;
 border-radius: 16px;
 box-sizing: border-box;
-height: 32px;
+height: 26px;
 background: #e5e5e5;
 z-index: 0;
 margin: 0;
@@ -127,7 +127,7 @@ top: 2px;
 width: 48px;
 border-radius: 16px;
 box-sizing: border-box;
-height: 28px;
+height: 22px;
 background: #fff;
 z-index: 1;
 -webkit-transition-duration: 300ms;
@@ -137,9 +137,9 @@ transform: scale(1);
 }
 .label-switch .checkbox:after {
 content: ' ';
-height: 28px;
-width: 28px;
-border-radius: 28px;
+height: 22px;
+width: 22px;
+border-radius: 22px;
 background: #fff;
 position: absolute;
 z-index: 2;
@@ -155,31 +155,34 @@ transition-duration: 300ms;
 background: linear-gradient(to right,#fe47a4,#b944ee);
 }
 .label-switch input[type="checkbox"]:checked + .checkbox:after {
--webkit-transform: translateX(20px);
-transform: translateX(20px);
+-webkit-transform: translateX(26px);
+transform: translateX(26px);
 }
 .label-switch input[type="checkbox"]:checked + .checkbox:before {
 -webkit-transform: scale(0);
 transform: scale(0);
 }
-.ctrl-move-onOff{ font-size: 22px; position: absolute; bottom: 10px; width: 100%; color: #FFF; padding-left: 20px; box-sizing: border-box; }
+.ctrl-move-onOff,.ctrl-scale-onOff{ font-size: 20px; height: 30px; position: absolute; bottom: 10px; width: 100%; color: #FFF; padding-left: 20px; box-sizing: border-box; }
+.ctrl-scale-onOff{ bottom: 50px; }
+.ctrl-move-onOff > span,.ctrl-scale-onOff > span{ padding-right: 40px; }
 /*聊天层内容*/
 .main-content{ width: 1920px; height: 100%; position: relative; z-index: 0; overflow: hidden; background-color: #000; background-repeat: no-repeat; background-position: center; background-size: 100%; }
 .redpacket-content{ position: absolute; width: 30%; height: 200px; border: 2px dashed red; text-align: right; }
 
 /*土豪榜*/
-.rank-content{ position: absolute; overflow: auto; background: #1b1b1b; border-radius: 20px; z-index: 4; }
+.rank-content{ position: absolute; background: #1b1b1b; border-radius: 20px; z-index: 4; }
+.rank-content-wrap{ overflow: hidden; height: 100%; padding-bottom: 40px; border-radius: 0 0 20px 20px; box-sizing: border-box; }
 .rank-content .rank-top-msg{ width: 100%; margin: 0 auto; padding: 20px; box-sizing: border-box; align-items: center; justify-content: center; -webkit-align-items: center; -webkit-justify-content: center; }
 .rank-content .rank-top-msg img{ width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; flex-shrink: 0;-webkit-flex-shrink: 0; }
 .rank-content .rank-top-msg div{ text-align: center; width: 100%; }
 .rank-content .rank-top-msg h3{ font-size: 24px; color: #FFF; font-weight: bold; width: 100%; }
 .rank-content .rank-top-msg p{ font-size: 18px; color: #FFF; }
-.rank-content > span{ color: #919191; display: block; width: 100%; text-align: center; padding: 10px 0; }
+.rank-content .rank-content-wrap > span{ position: absolute; color: #919191; background: #1b1b1b; overflow: hidden; width: 100%; bottom: 0; border-radius: 0 0 20px 20px; display: block; width: 100%; text-align: center; padding: 10px 0;z-index: 4; }
 .rank-content ul{ width: 100%; overflow: auto; }
-.rank-content ul li{ width: 100%; padding: 0 20px; box-sizing: border-box; height: 60px; position: relative; z-index: 1; align-items: center; -webkit-align-items: center; }
+.rank-content ul li{ width: 100%; padding: 5px 20px; box-sizing: border-box; position: relative; z-index: 1; align-items: center; -webkit-align-items: center; }
 .rank-content ul li .bg-percentage{ position: absolute; left: 0; top: 0; height: 100%; z-index: 0; }
 .rank-content ul li .rank-user-status{ position: relative; width: 100%; font-size: 24px; align-items:center; -webkit-align-items: center; color: #FFF; z-index: 1; }
-.rank-content ul li .rank-user-status img{ width: 50px; height: 50px; border-radius: 50%; }
+.rank-content ul li .rank-user-status img{ width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0; -webkit-flex-shrink: 0; }
 .rank-content ul li .rank-user-status i{ font-style: normal; display: block; width: 100%; margin: 0 10px; }
 .rank-content ul li .rank-user-status > span{ font-size: 24px; }
 .rank-content ul li:first-of-type .bg-percentage{  background: #F500CE; }
@@ -191,7 +194,7 @@ transform: scale(0);
 
 /*二维码*/
 .hiChat-content{ position: absolute; border-radius: 20px; background: linear-gradient(to right bottom,#f404c9,#333397); padding: 20px; box-sizing: border-box; z-index: 1; }
-.hiChat-content .qrcode-imgwrap{ width: 130px; height: 130px; margin-right: 10px; border-radius: 10px; padding: 8px; background: #FFF; box-sizing: border-box; }
+.hiChat-content .qrcode-imgwrap{ width: 130px; margin-right: 10px; border-radius: 10px; padding: 8px; background: #FFF; box-sizing: border-box; }
 .hiChat-content .qrcode-imgwrap img{ width:100%; }
 .hiChat-content .hiChat-text{ font-size: 0; color: #FFF; text-align: center; }
 .hiChat-content .hiChat-text p{ font-size: 36px; }
@@ -254,21 +257,25 @@ transform: scale(0);
 .moveDiv-nameIco .setClose-ico p i:last-of-type{ margin-right: 0; cursor: n-resize }
 
 /*移动层配置*/
-.moveDiv-config{ background: rgba(255,255,255,0.3); width: 100%; height: 100%; position: fixed; left: 0; top: 0; justify-content: center; align-items: center; }
+.moveDiv-config{ background: rgba(255,255,255,0.3); width: 100%; height: 100%; position: fixed; left: 0; top: 0; justify-content: center; align-items: center; z-index: 10; }
 .moveDiv-config > div{ background: #222222; }
+.moveDiv-config  .settint-panel-title{ font-size: 20px; }
+.moveDiv-config > div select{ font-size: 20px; padding: 0 10px }
 .moveDiv-config > div .settint-panel-title span{ margin-right: 100px; }
-.rank-config,.chat-config{ border-radius: 5px; overflow: hidden; }
-.rank-config .rank-config-content > div,.chat-config .chat-config-content > div{ margin-bottom: 15px; }
-.rank-config .rank-config-content > div:last-of-type,.chat-config .chat-config-content > div:last-of-type{ margin-bottom: 0; }
-.rank-config-content,.chat-config-content{ padding: 25px; }
-.rank-config .rank-config-content > div > span,.chat-config .chat-config-content > div > span,.fontSize span{ color: #FFF; padding-right: 25px; font-size: 20px; }
-.rank-title input{ border: none; border-radius: 5px; font-size: 18px; padding: 5px 10px; width: 200px; box-sizing: border-box; }
-.update-fre,.width-per,.version{ color: #FFF; font-size: 18px; }
+.moveDiv-config > div{ border-radius: 5px; overflow: hidden; }
+.rank-config-content,.chat-config-content,.qrcode-config-content,.welecome-config-content,.carousel-config-content,.logo-config-content{ padding: 25px; }
+.rank-config-content > div,.chat-config-content > div,.qrcode-config-content > div,.welecome-config-content > div,.carousel-config-content > div,.logo-config-content > div{ margin-bottom: 15px; }
+.rank-config-content > div:last-of-type,.chat-config-content > div:last-of-type,.qrcode-config-content > div:last-of-type,.welecome-config-content > div:last-of-type,.carousel-config-content > div:last-of-type,.logo-config-content > div:last-of-type{ margin-bottom: 0; }
+.rank-config-content div > span,.chat-config-content  div > span,.fontSize p span,.scroll-time p span,.qrcode-config-content div > span,.welecome-config-content div > span,.carousel-config-content div > span,.logo-config-content div > span{ color: #FFF; padding-right: 25px; font-size: 20px; }
+.rank-title input,.welecome-text input{ border: none; border-radius: 5px; font-size: 18px; padding: 5px 10px; width: 200px; box-sizing: border-box; }
+.update-fre,.width-per,.version,.height-per{ color: #FFF; font-size: 18px; }
 .update-fre label span,.update-fre label input,.version label span,.version label input{ display: inline-block; vertical-align: middle; }
 .update-fre label input,.version label input{ margin-left: 20px; width: 16px; height: 16px; }
 .update-fre label:first-of-type input,.version label:first-of-type input{ margin-left: 0; }
-.show-peoplenum select{ font-size: 18px; width: 50px; }
-.width-per input{ border: none; font-size: 20px; width: 50px; }
-.fontSize p{ font-size: 18px; color: #FFF; margin-bottom: 10px; }
-.fontSize input{ width: 250px; }
-
+.show-peoplenum select{ min-width: 50px; }
+.width-per input,.height-per input{ border: none; font-size: 20px; width: 50px; margin-right: 5px; text-align: center; }
+.fontSize p,.scroll-time p{ font-size: 18px; color: #FFF; margin-bottom: 10px; }
+.fontSize input,.scroll-time input{ width: 100%; margin-top: 5px; }
+.message-scroll .label-switch{ margin-left: 100px; }
+.carousel-fre,.logo-upload{ align-items: center; -webkit-align-items: center; }
+.logo-upload i{ display: block; width: 80px; height: 28px; line-height: 28px; font-size: 18px; text-align: center; background: #FFF; border-radius: 5px; margin-left: 20px; cursor: pointer; }
