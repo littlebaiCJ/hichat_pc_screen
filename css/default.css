@@ -203,6 +203,17 @@ transform: scale(0);
 
 /*欢迎语层*/
 .welcome-content{ position: absolute; color: #FFF; font-size: 50px; padding: 10px 0; text-align: center; z-index: 3; }
+.in-welecome-text{ height: 100%; width: 100%; overflow: hidden; position: relative; }
+.in-welecome-text span{ position: absolute; width: 487px; left: -100%; display: block; white-space: nowrap; text-align: center; top: 0; }
+.text-scroll{ animation: textMove 8s linear infinite; }
+@keyframes textMove{
+    from{
+        transform: translate(-100%);
+    }
+    to{
+        transform: translate(100%);
+    }
+}
 
 /*聊天层*/
 .chat-content{ position: absolute; }
@@ -219,8 +230,35 @@ transform: scale(0);
 
 /*广告层*/
 .adv-content{ position: absolute; border-radius: 10px 10px 0 0; background-color: #1b1b1b; }
-.adv-content > h3{ width: 92%; margin: 0 auto; color: #FFF; text-align: center; border-bottom: 2px solid #535353; font-size: 24px; padding: 10px 0; margin-bottom: 5px; }
-.adv-content img{ width: 100%; height: 100%; }
+.adv-content > h3{ width: 92%; height: 30px; margin: 0 auto; color: #FFF; text-align: center; border-bottom: 2px solid #535353; font-size: 24px; padding: 10px 0; margin-bottom: 5px; }
+.adv-content img{ width: 100%; }
+.adv-img1,.adv-img2{ width: 100%; height: calc(100% - 55px); height: -webkit-calc(100% - 55px); overflow: hidden; position: relative; }
+.adv-img1 > img,.adv-img2 > img{ position: absolute; opacity: 0; }
+.adv-img1 > img:first-of-type,.adv-img2 > img:first-of-type{ opacity: 1; }
+
+/*图片轮播*/
+.carousel-content{ position: absolute; }
+.carousel-content > img{ width: 100%; height: 100%; border-radius: 20px; position: absolute; }
+.fade-carousel > img{ opacity: 0; }
+.fade-carousel > img:first-of-type{ opacity: 1; }
+.fade-In{ animation: fadeIn 1s forwards; }
+.fade-Out{ animation: fadeOut 1s forwards; }
+@keyframes fadeIn{
+from{
+    opacity: 0;
+}
+to{
+    opacity: 1;
+}
+}
+@keyframes fadeOut{
+from{
+opacity: 1;
+}
+to{
+opacity: 0;
+}
+}
 
 /*大屏幕设置*/
 .screen-setting-panel{ overflow: hidden; position: absolute; width: 700px; height: 500px; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background-color: #1b1b1b; border-radius: 5px; z-index: 1; }
@@ -243,7 +281,8 @@ transform: scale(0);
 .panel-setting-input .screen-setting .brightness input[type="range"]{ margin-left: 50px; }
 .panel-setting-input .screen-setting .rp-set,.panel-setting-input .screen-setting .screen-website,.panel-setting-input .screen-setting .programme-name{ padding: 30px 30px 0 30px; color: #FFF; }
 .panel-setting-input .screen-setting .rp-set span,.panel-setting-input .screen-setting .screen-website span,.panel-setting-input .screen-setting .programme-name span{ display: block; }
-.panel-setting-input .screen-setting .rp-set select{  font-size: 18px; margin-top: 10px; text-align: center; }
+.panel-setting-input .screen-setting .rp-set input{ width: 80px; border: none; border-radius: 5px; font-size: 16px; margin: 0 5px; margin-top: 10px; text-align: center; padding: 5px 0; }
+.panel-setting-input .screen-setting .rp-set i{ padding: 0 5px; }
 .panel-setting-input .screen-setting .screen-website input,.panel-setting-input .screen-setting .programme-name input{ border: none; font-size: 16px; border-radius: 5px; margin-top: 10px;padding: 5px 10px; }
 
 /*移动层标题、设置移入显示样式*/
@@ -263,11 +302,13 @@ transform: scale(0);
 .moveDiv-config > div select{ font-size: 20px; padding: 0 10px }
 .moveDiv-config > div .settint-panel-title span{ margin-right: 100px; }
 .moveDiv-config > div{ border-radius: 5px; overflow: hidden; }
-.rank-config-content,.chat-config-content,.qrcode-config-content,.welecome-config-content,.carousel-config-content,.logo-config-content{ padding: 25px; }
-.rank-config-content > div,.chat-config-content > div,.qrcode-config-content > div,.welecome-config-content > div,.carousel-config-content > div,.logo-config-content > div{ margin-bottom: 15px; }
-.rank-config-content > div:last-of-type,.chat-config-content > div:last-of-type,.qrcode-config-content > div:last-of-type,.welecome-config-content > div:last-of-type,.carousel-config-content > div:last-of-type,.logo-config-content > div:last-of-type{ margin-bottom: 0; }
-.rank-config-content div > span,.chat-config-content  div > span,.fontSize p span,.scroll-time p span,.qrcode-config-content div > span,.welecome-config-content div > span,.carousel-config-content div > span,.logo-config-content div > span{ color: #FFF; padding-right: 25px; font-size: 20px; }
-.rank-title input,.welecome-text input{ border: none; border-radius: 5px; font-size: 18px; padding: 5px 10px; width: 200px; box-sizing: border-box; }
+.rank-config-content,.chat-config-content,.qrcode-config-content,.welecome-config-content,.carousel-config-content,.logo-config-content,.adv1-config-content{ padding: 25px; }
+.rank-config-content > div,.chat-config-content > div,.qrcode-config-content > div,.welecome-config-content > div,.carousel-config-content > div,.logo-config-content > div,.adv1-config-content > div{ margin-bottom: 15px; }
+.rank-config-content > div:last-of-type,.chat-config-content > div:last-of-type,.qrcode-config-content > div:last-of-type,.welecome-config-content > div:last-of-type,
+.carousel-config-content > div:last-of-type,.logo-config-content > div:last-of-type,.adv1-config-content > div:last-of-type{ margin-bottom: 0; }
+.rank-config-content div > span,.chat-config-content  div > span,.fontSize p span,.scroll-time p span,.qrcode-config-content div > span,.welecome-config-content div > span,
+.carousel-config-content div > span,.logo-config-content div > span,.adv1-config-content div > span{ color: #FFF; padding-right: 25px; font-size: 20px; }
+.rank-title input,.welecome-text input,.adv1-title input{ border: none; border-radius: 5px; font-size: 18px; padding: 5px 10px; width: 200px; box-sizing: border-box; }
 .update-fre,.width-per,.version,.height-per{ color: #FFF; font-size: 18px; }
 .update-fre label span,.update-fre label input,.version label span,.version label input{ display: inline-block; vertical-align: middle; }
 .update-fre label input,.version label input{ margin-left: 20px; width: 16px; height: 16px; }
@@ -279,3 +320,7 @@ transform: scale(0);
 .message-scroll .label-switch{ margin-left: 100px; }
 .carousel-fre,.logo-upload{ align-items: center; -webkit-align-items: center; }
 .logo-upload i{ display: block; width: 80px; height: 28px; line-height: 28px; font-size: 18px; text-align: center; background: #FFF; border-radius: 5px; margin-left: 20px; cursor: pointer; }
+.upload-advimg ul{ margin-top: 10px; }
+.upload-advimg ul li{ position: relative; width: 120px; height: 120px; background: #FFF; margin-right: 10px; font-size: 60px; line-height: 120px; text-align: center; font-weight: bold; }
+.upload-advimg ul li:last-of-type{ margin-right: 0; }
+.upload-advimg ul li img{ width: 100%; position: absolute; top:0; right: 0; left: 0; bottom: 0; margin: 0 auto; }

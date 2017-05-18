@@ -49,7 +49,7 @@
         <span id="control-element" class="iconfont icon-aside-right"></span>
     </aside>
     <div class="main-content" id="main-content" style="background-image: url(images/bg.jpg);">
-        <div class="adv-content move-div hide" id="adv-content1" style=" top: 50px; left: 30px; width:300px; height: 320px;">
+        <div class="adv-content move-div" id="adv-content1" data-config="7" style=" top: 50px; left: 30px; width:300px; height: 320px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>广告位</h3>
                 <div class="setClose-ico">
@@ -58,9 +58,13 @@
                 </div>
             </div>
             <h3>派对预告/酒水优惠</h3>
-            <img src="images/tx.jpg" alt="">
+            <div class="adv-img1">
+                <img src="images/tx.jpg" alt="">
+                <img src="images/tx1.jpg" alt="">
+                <img src="images/tx5.jpg" alt="">
+            </div>
         </div>
-        <div class="adv-content move-div hide" id="adv-content2" style=" top: 500px; left: 30px; width:300px; height: 320px;">
+        <div class="adv-content move-div" id="adv-content2" style=" top: 500px; left: 30px; width:300px; height: 320px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>广告位</h3>
                 <div class="setClose-ico">
@@ -69,9 +73,13 @@
                 </div>
             </div>
             <h3>广告招商</h3>
-            <img src="images/tx1.jpg" alt="">
+            <div class="adv-img2">
+                <img src="images/tx.jpg" alt="">
+                <img src="images/tx1.jpg" alt="">
+                <img src="images/tx5.jpg" alt="">
+            </div>
         </div>
-        <div class="welcome-content move-div hide" data-config="4" id="welcome-content" style=" left: 600px; top: 0px; width: 800px;">
+        <div class="welcome-content move-div" data-config="4" id="welcome-content" style=" left: 600px; top: 0px; width: 800px; height: 100px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>欢迎语</h3>
                 <div class="setClose-ico">
@@ -79,7 +87,9 @@
                     <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
                 </div>
             </div>
-            欢迎光临SHOW8BAR
+            <div class="in-welecome-text">
+                <span>欢迎光临SHOW8BAR</span>
+            </div>
         </div>
         <div class="chat-content move-div hide" data-config="2" id="chat-content" style="left: 600px; top: 100px; width: 800px; height: 500px;">
             <div class="moveDiv-nameIco hide flex">
@@ -128,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div class="rank-content move-div" data-config="1" id="rank-content" style="left: 1550px; top: 50px;  width: 350px;">
+        <div class="rank-content move-div hide" data-config="1" id="rank-content" style="left: 1550px; top: 50px;  width: 350px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>排行榜</h3>
                 <div class="setClose-ico">
@@ -201,6 +211,19 @@
                 <span>Welcome To HiChat</span>
             </div>
         </div>
+        <div class="carousel-content fade-carousel hide" data-config="5" id="carousel-content" style="left: 100px; top: 100px; height: 500px;width: 300px;">
+            <div class="moveDiv-nameIco hide flex">
+                <h3>轮播图</h3>
+                <div class="setClose-ico">
+                    <p class="hide"><i>设置</i><i>删除</i></p>
+                    <span class="iconfont icon-ordinaryset"></span> <span class="iconfont icon-guanbi"></span>
+                </div>
+            </div>
+            <img src="images/tx1.jpg" alt="">
+            <img src="images/tx2.jpg" alt="">
+            <img src="images/tx3.jpg" alt="">
+            <img src="images/tx4.jpg" alt="">
+        </div>
         <div class="screen-setting-panel hide" id="screen-setting-panel">
             <div class="settint-panel-title">
                 <span>大屏幕设置</span> <i class="iconfont icon-guanbi"></i>
@@ -245,9 +268,7 @@
                         </div>
                         <div class="rp-set">
                             <span>屏幕分辨率</span>
-                            <select name="" id="">
-                                <option>1920*1080</option>
-                            </select>
+                            <input type="number"/><i>x</i><input type="number"/>
                         </div>
                         <div class="screen-website">
                             <span>屏幕地址</span> <input type="url"/>
@@ -266,7 +287,7 @@
                 </div>
             </div>
         </div>
-        <div class="moveDiv-config flex hide">
+        <div class="moveDiv-config hide flex">
             <div data-config="1" class="rank-config hide">
                 <div class="settint-panel-title">
                     <span>排行榜设置</span> <i class="iconfont icon-guanbi"></i>
@@ -410,6 +431,32 @@
                     </div>
                 </div>
             </div>
+            <div data-config="7" class="adv1-config hide">
+                <div class="settint-panel-title">
+                    <span>1号广告位设置</span> <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="adv1-config-content">
+                    <div class="adv1-title">
+                        <span>广告标题</span><input type="text"/>
+                    </div>
+                    <div class="img-tab-second">
+                        <span>图片切换秒数</span>
+                        <select>
+                            <option>5秒</option>
+                            <option>8秒</option>
+                            <option>10秒</option>
+                        </select>
+                    </div>
+                    <div class="upload-advimg">
+                        <span>上传广告图片</span>
+                        <ul class="flex">
+                            <li><img src="images/tx1.jpg" alt=""></li>
+                            <li><img src="images/tx1.jpg" alt=""></li>
+                            <li>+</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -432,9 +479,11 @@
     $('.move-div .moveDiv-nameIco').find('.icon-ordinaryset').click(function(){
         var moveDiv_dc=$(this).parents('.move-div').attr("data-config");
         $('.moveDiv-config').removeClass('hide');
-        if($('.moveDiv-config').find('div').attr('data-config')==moveDiv_dc){
-            alert(1);
-        }
+        $('.moveDiv-config > div').each(function(){
+            if($(this).attr('data-config')==moveDiv_dc){
+                $(this).removeClass('hide');
+            }
+        })
     })
 </script>
 <script>
@@ -742,11 +791,31 @@
             background : 'transparent'
         })
     })
+
     /*配置层关闭*/
     $('.moveDiv-config').find('.icon-guanbi').click(function(){
         $(this).parents('.moveDiv-config').addClass('hide');
         $(this).parent().parent().addClass('hide');
     })
+
+    /*图片轮播淡入淡出*/
+    function imgFadeAni(obj){
+        var img_index = 0;
+        setInterval(function(){
+            img_index++;
+            if(img_index >= $(obj + ' > img').length){
+                img_index = 0;
+            }
+            $(obj + ' > img').eq(img_index - 1).removeClass('fade-In').addClass('fade-Out');
+            $(obj + ' > img').eq(img_index).removeClass('fade-Out').addClass('fade-In');
+        }, 3000)
+    }
+    imgFadeAni('.fade-carousel')
+    imgFadeAni('.adv-img1')
+    imgFadeAni('.adv-img2')
+
+/*文字滚动效果*/
+
 </script>
 </body>
 </html>
