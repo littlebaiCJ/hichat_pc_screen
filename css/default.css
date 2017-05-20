@@ -195,7 +195,8 @@ transform: scale(0);
 .pa-time p{ font-size: 30px; letter-spacing: 3px; text-shadow: 0px 0px 10px rgba(0,0,0,1); }
 .pa-time p span{ font-size: 50px; }
 .h-img,.h-text-img{ align-items: center; overflow: hidden; background: transparent; }
-.h-img > img{ width: 100%; margin-left: 10px; }
+.h-img .right-content{ width: 100%; }
+.h-img .right-content img{ width: 100%; margin-left: 10px; }
 .h-img .pa-time,.h-text-img .pa-time,.v-img .pa-time,.v-text-img .pa-time{ display: block; white-space: nowrap; position: static; text-align:center; }
 .h-img .pa-time p{ white-space: nowrap; margin: 50px 0; }
 .h-img .pa-user-name{ max-width: 200px; }
@@ -243,7 +244,7 @@ transform: scale(0);
 .card-show .card-text p{ font-size: 42px; color: #FFF; font-weight: bold; }
 
 /*红包*/
-.redpacket{ position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.2) url("../images/rp_bg.png") center no-repeat; background-size: cover; z-index: 11; top: 0; left: 0; }
+.redpacket{ position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.4) url("../images/rp_bg.png") center no-repeat; background-size: cover; z-index: 11; top: 0; left: 0; }
 .in-redpacket{ width: 560px; height: 400px; background: url("../images/rp.png") center no-repeat; background-size: 100% 100%; position: fixed; top: 0; left: 0; bottom: 0; right: 0; margin: auto; }
 .in-redpacket .open{ position: absolute; width: 150px; height: 150px; background: url('../images/open.png') center no-repeat; background-size: 95%; top: 0; bottom: 0; left: 0; right: 0; margin: auto;  -webkit-animation: ping-animate 2s infinite; animation: ping-animate 2s infinite; }
 @-webkit-keyframes ping-animate{
@@ -353,6 +354,7 @@ transform: scale(0);
 .chat-content{ position: absolute; }
 .message-content-wrap{ height: 100%; overflow: auto; }
 .chat-content .message-content{ position: relative; width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box; border-radius: 50px; background: linear-gradient(to right,#e04fd2,#25e2e0); align-items: flex-start; }
+.chat-content .message-content .message-user-info img{ max-width: 60%; max-height: 300px; margin-top: 10px; }
 .chat-content .message-content:last-of-type{ margin-bottom: 0; }
 .chat-content .message-content > img{ height: 80px; width: 80px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
 .chat-content .message-content .message-user-info{ width: 85%; color: #FFF; }
@@ -401,7 +403,7 @@ opacity: 0;
 }
 
 /*大屏幕设置*/
-.screen-setting-panel{ overflow: hidden; position: absolute; width: 700px; height: 500px; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background-color: #1b1b1b; border-radius: 5px; z-index: 1; }
+.screen-setting-panel{ overflow: hidden; position: absolute; width: 700px; height: 500px; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background-color: #1b1b1b; border-radius: 5px; z-index: 9; }
 .settint-panel-title{ height: 40px; width: 100%; background-color: #333333; line-height: 40px; color: #FFF; padding: 0 5px 0 20px; box-sizing: border-box; }
 .settint-panel-title i{ float: right; padding: 0 15px; }
 .panel-content{ height: calc(100% - 40px); height: -webkit-calc(100% - 40px); width: 100%; }
@@ -436,7 +438,7 @@ opacity: 0;
 .moveDiv-nameIco .setClose-ico p i:last-of-type{ margin-right: 0; cursor: n-resize }
 
 /*移动层配置*/
-.moveDiv-config{ background: rgba(255,255,255,0.3); width: 100%; height: 100%; position: fixed; left: 0; top: 0; justify-content: center; align-items: center; z-index: 10; }
+.moveDiv-config{ background: rgba(255,255,255,0.3); width: 100%; height: 100%; position: fixed; left: 0; top: 0; justify-content: center; align-items: center; z-index: 20; }
 .moveDiv-config > div{ background: #222222; }
 .moveDiv-config  .settint-panel-title{ font-size: 20px; }
 .moveDiv-config > div select{ font-size: 20px; padding: 0 10px }
@@ -464,3 +466,21 @@ opacity: 0;
 .upload-advimg ul li{ position: relative; width: 120px; height: 120px; background: #FFF; margin-right: 10px; font-size: 60px; line-height: 120px; text-align: center; font-weight: bold; }
 .upload-advimg ul li:last-of-type{ margin-right: 0; }
 .upload-advimg ul li img{ width: 100%; position: absolute; top:0; right: 0; left: 0; bottom: 0; margin: 0 auto; }
+
+/*登录界面*/
+.login-page{ width: 100%; height: 100%; position: relative; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.login-page .login-header{ width: 100%; font-size: 0; background: rgba(0,0,0,0.5); padding: 15px 20%; box-sizing: border-box; }
+.login-page .login-header img{ display: inline-block; vertical-align: middle; width: 100px; height: 100px; border: 1px solid #fe47a4; border-radius: 20px; }
+.login-page .login-header span{ display: inline-block; vertical-align: middle; font-size: 36px; color: #FFF; padding-left: 20px; }
+.login-page .login-content{ width: 400px; height: 380px; padding: 15px; text-align: center; box-sizing: border-box; border-radius: 30px; background: #FFF; position: absolute; left: 0; right: 0; top: 0; bottom:0; margin: auto; }
+.login-page .login-content .tab-ico{ height: 35px; width: 100%; position: relative; }
+.login-page .login-content .tab-ico span{ color: #969696; position: absolute; right: 0; top: 0; font-size: 30px; cursor: pointer; }
+.login-page .login-content .tab-ico span:hover{ color: #000; }
+.login-page .login-content .in-password-content h3,.login-page .login-content .in-qrcode-content h3{ font-size: 28px; margin-bottom: 30px; }
+.login-page .login-content .in-password-content input,.login-page .login-content .in-password-content button{ display: block; text-align: center; font-size: 24px; margin: 0 auto; margin-top: 30px; border: 1px solid #fe47a4; box-sizing: border-box; padding: 10px; width: 80%; border-radius: 25px/50%; }
+.login-page .login-content .in-password-content button{ color: #FFF; font-size: 24px; background: linear-gradient(to right,#fe47a4,#b545f1); border: none; }
+.login-page .login-content .in-password-content .saoma-tip,.login-page .login-content .in-qrcode-content .password-tip{ display: inline-block; margin-top: 50px; font-size: 16px; color: #787878; }
+.login-page .login-content .in-qrcode-content{ text-align: center; }
+.login-page .login-content .in-qrcode-content img{ width: 55%; display: block; margin: 0 auto; }
+.login-page .login-content .in-qrcode-content .password-tip{ margin-top: 20px; }
+
