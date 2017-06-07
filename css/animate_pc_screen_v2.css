@@ -1,0 +1,1121 @@
+.paused-animate *{ animation-play-state:paused !important }
+.gift-num{ position:absolute; bottom:40%; left:80%; color:#f60; font-size:1.2rem; z-index:17 }
+.gift-num-animate{ animation:gift-num-animate .1s; -webkit-animation:gift-num-animate .1s; animation-fill-mode:forwards }
+.gift-text{ position:absolute; bottom:60px; text-align:center; left:-100%; padding:0 .3rem; color:#f8cb00; font-size:.6rem; animation:gift-text-animate 4s 1s; -webkit-animation:gift-text-animate 4s 1s; background:rgba(0, 0, 0, 0.5); border-radius:.2rem; width:80%; z-index:16 }
+.sender,.gainer{ width:100%; position:fixed; }
+.sender{ bottom: 9vw; left:-100%; animation:sender-animate 3s 2s; -webkit-animation:sender-animate 4s 1s; animation-fill-mode:forwards; z-index:199; }
+.gainer{ bottom: 3vw; left:100%; animation:gainer-animate 3s 2s; -webkit-animation:gainer-animate 4s 1s; animation-fill-mode:forwards; z-index:200; }
+.sender img, .gainer img{ width: 7vw; height: 7vw; border-radius:50%; display:inline-block; vertical-align:middle; border: 2px solid #1affff; box-shadow:1px 1px 10px #000; animation:sg-img-shadow 2s infinite; -webkit-animation:sg-img-shadow 2s infinite; }
+.sender p, .gainer p{ width:50%; background:rgba(0, 0, 0, 0.8); display:inline-block; vertical-align:middle; border-radius: 5px; padding:5px 10px; }
+.sender p .sender-name, .gainer p .gainer-name{ color:#f8cb00; display:block; max-width:100%; width:100%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding:.03rem 0; font-size: 3vw; color:#f8cb00; word-break:break-all; background-image:-webkit-linear-gradient(left, #147b96, #e6d205 25%, #147b96 50%, #e6d205 75%, #147b96); -webkit-text-fill-color:transparent; -webkit-background-clip:text; -webkit-background-size:200% 100%; animation:sg-text-shadow 2s infinite linear; -webkit-animation:sg-text-shadow 2s infinite linear; }
+.sender p .sender-name{ text-align:left; }
+.gainer p .gainer-name{ text-align:right; }
+.song-word{ font-size: 3.5vw; padding:.05rem; color:#ff6600; position:absolute; bottom: 6.5vw; text-align:center; width:100%; width: 6vw; height:6vw; line-height: 6vw; margin:0 auto; left:0; right:0; background:rgba(190, 190, 190, 0.8); border-radius:50%; opacity:0; animation:song-animate 4s 1s; -webkit-animation:song-animate 4s 1s; animation-fill-mode:forwards; z-index:300; }
+@-webkit-keyframes sg-text-shadow{
+ 0%{ text-shadow:0 0 10px #fbc800; background-position:0 0; }
+ 100%{ text-shadow:0 0 20px #b2ff1a; background-position:-100% 0; }
+}
+@keyframes sg-text-shadow{
+ 0%{ text-shadow:0 0 20px #fbc800; background-position:0 0; }
+ 100%{ text-shadow:0 0 30px #b2ff1a; background-position:-100% 0; }
+}
+@keyframes sender-animate{
+ 0%{ transform:translate(0); }
+ 15%{ transform:translate(111%); }
+ 100%{ transform:translate(111%); }
+}
+@-webkit-keyframes sender-animate{
+ 0%{ transform:translate(0); }
+ 15%{ transform:translate(111%); }
+ 100%{ transform:translate(111%); }
+}
+@keyframes gainer-animate{
+ 0%{ transform:translate(0); }
+ 15%{ transform:translate(-72%); }
+ 100%{ transform:translate(-72%); }
+}
+@-webkit-keyframes gainer-animate{
+ 0%{ transform: translate(0); }
+ 15%{ transform: translate(-72%); }
+ 100%{ transform: translate(-72%); }
+}
+@keyframes song-animate{
+ 0%{ opacity:0; }
+ 15%{ opacity:1; transform:scale(1); }
+ 25%{ transform:scale(1.5); }
+ 35%{ transform:scale(1); }
+ 45%{ transform:rotate(15deg); }
+ 50%{ transform:rotate(-15deg); }
+ 55%{ transform:rotate(12deg); }
+ 65%{ transform:rotate(-12deg); }
+ 70%{ transform:rotate(0deg); }
+ 100%{ opacity:1; }
+}
+@-webkit-keyframes song-animate{
+ 0%{ opacity:0; }
+ 15%{ opacity:1; transform:scale(1); }
+ 25%{ transform:scale(1.5); }
+ 35%{ transform:scale(1); }
+ 45%{ transform:rotate(15deg); }
+ 50%{ transform:rotate(-15deg); }
+ 55%{ transform:rotate(12deg); }
+ 65%{ transform:rotate(-12deg); }
+ 70%{ transform:rotate(0deg); }
+ 100%{ opacity:1; }
+}
+@media screen and (min-device-width:1024px){
+.gift-num{ font-size:7vw }
+.gift-text{ font-size:.3rem }
+}
+@keyframes gift-num-animate{
+0%{ transform:scale(1.5) }
+100%{ transform:scale(1) }
+}
+@-webkit-keyframes gift-num-animate{
+0%{ transform:scale(1) }
+50%{ transform:scale(1.3) }
+100%{ transform:scale(1) }
+}
+@keyframes gift-text-animate{
+0%{ left:-100% }
+10%{ left:0; right:0; margin:0 auto }
+95%{ opacity:1 }
+100%{ left:0; right:0; margin:0 auto; opacity:0 }
+}
+@-webkit-keyframes gift-text-animate{
+0%{ left:-100% }
+10%{ left:0; right:0; margin:0 auto }
+95%{ opacity:1 }
+100%{ left:0; right:0; margin:0 auto; opacity:0 }
+}
+.cucumber-animate-wrap > span, .rocket-animate-wrap > span, .wine-animate-wrap > span, .plane-animate-wrap > span, .dolls-animate-wrap > span, .ttq-animate-wrap > span, .car-animate-wrap > span, .coin-animate-wrap > span, .island-animate-wrap > span, .ship-animate-wrap > span, .cruise-animate-wrap > span{ font-size:1rem; position:absolute; right:.5rem; top:3rem; color:#fff; text-shadow:0 0 10px #000 }
+.cucumber-animate-wrap{ position:fixed; width:100%; height:100%; top:0; z-index:15; font-size:0; background:rgba(0, 0, 0, 0.3) }
+.cucumber-animate{ position:absolute; left:-100%; top:0; width:100%; height:100%; overflow:hidden; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90%; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; backface-visibility:hidden }
+.cucumber-animateIn{ animation:cucumber-animateIn 3s; -webkit-animation:cucumber-animateIn 3s; animation-fill-mode:forwards }
+.cucumber-animateIng{ animation:cucumber-animateIng 1s infinite; -webkit-animation:cucumber-animateIng 1s infinite }
+.cucumber-animateOut{ animation:cucumber-animateOut .5s; -webkit-animation:cucumber-animateOut .5s }
+@-webkit-keyframes cucumber-animateIn{
+0%{ left:-100%; transform:rotate(30deg) }
+10%{ left:-50%; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; transform:rotate(30deg); background-size:auto 90% }
+12%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+14%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+16%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+35%{ left:-50%; transform:rotate(30deg) }
+50%{ left:0; transform:rotate(0deg) }
+52%{ transform:rotate(25deg) }
+54%{ transform:rotate(-15deg) }
+56%{ transform:rotate(10deg) }
+58%{ transform:rotate(-5deg) }
+60%{ transform:rotate(0deg) }
+70%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+72%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+74%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+76%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+78%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+}
+@-webkit-keyframes cucumber-animateIng{
+0%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+25%{ left:0; transform:rotate(15deg) }
+75%{ left:0; transform:rotate(-15deg) }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+}
+@-webkit-keyframes cucumber-animateOut{
+0%{ left:0; opacity:1 }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90%; opacity:0 }
+}
+@keyframes cucumber-animateIn{
+0%{ left:-100%; transform:rotate(30deg) }
+10%{ left:-50%; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; transform:rotate(30deg); background-size:auto 90%; background-size:auto 90% }
+12%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+14%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+16%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+35%{ left:-50%; transform:rotate(30deg) }
+50%{ left:0; transform:rotate(0deg) }
+52%{ transform:rotate(25deg) }
+54%{ transform:rotate(-15deg) }
+56%{ transform:rotate(10deg) }
+58%{ transform:rotate(-5deg) }
+60%{ transform:rotate(0deg) }
+70%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+72%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+74%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+76%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
+78%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+}
+@keyframes cucumber-animateIng{
+0%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+25%{ left:0; transform:rotate(15deg) }
+75%{ left:0; transform:rotate(-15deg) }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
+}
+@keyframes cucumber-animateOut{
+0%{ left:0; opacity:1 }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90%; opacity:0 }
+}
+@media screen and (max-width:768px){
+.cucumber-animate{ background-size:100% }
+@-webkit-keyframes cucumber-animate{
+0%{ left:-100%; transform:rotate(30deg) }
+10%{ left:-50%; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100%; transform:rotate(30deg) }
+12%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+14%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+16%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+35%{ left:-50%; transform:rotate(30deg) }
+50%{ left:0; transform:rotate(0deg) }
+52%{ transform:rotate(25deg) }
+54%{ transform:rotate(-15deg) }
+56%{ transform:rotate(10deg) }
+58%{ transform:rotate(-5deg) }
+60%{ transform:rotate(0deg) }
+70%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+72%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+74%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+76%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+78%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+}@-webkit-keyframes cucumber-animateIng{
+ 0%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+ 25%{ left:0; transform:rotate(15deg) }
+ 75%{ left:0; transform:rotate(-15deg) }
+ 100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+ }@-webkit-keyframes cucumber-animateOut{
+  0%{ left:0; opacity:1 }
+  100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100%; opacity:0 }
+  }@keyframes cucumber-animateIn{
+   0%{ left:-100%; transform:rotate(30deg) }
+   10%{ left:-50%; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100%; transform:rotate(30deg) }
+   12%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   14%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+   16%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   35%{ left:-50%; transform:rotate(30deg) }
+   50%{ left:0; transform:rotate(0deg) }
+   52%{ transform:rotate(25deg) }
+   54%{ transform:rotate(-15deg) }
+   56%{ transform:rotate(10deg) }
+   58%{ transform:rotate(-5deg) }
+   60%{ transform:rotate(0deg) }
+   70%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   72%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+   74%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   76%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:100% }
+   78%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+   }@keyframes cucumber-animateIng{
+    0%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+    25%{ left:0; transform:rotate(15deg) }
+    75%{ left:0; transform:rotate(-15deg) }
+    100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100% }
+    }@keyframes cucumber-animateOut{
+     0%{ left:0; opacity:1 }
+     100%{ left:0; background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:100%; opacity:0 }
+     }
+}
+.rocket-animate-wrap{ position:fixed; top:0; height:100%; width:100%; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.rocket-animate{ position:absolute; bottom:-100%; overflow:hidden; width:100%; height:100%; background:url("../images/gift/rocket/1.png") no-repeat center }
+.rocket-animateIn{ animation:rocket-animateIn 1s; -webkit-animation:rocket-animateIn 1s; animation-fill-mode:forwards }
+.rocket-animateIng{ animation:rocket-animateIng 2s infinite; -webkit-animation:rocket-animateIng 2s infinite }
+.rocket-animateOut{ animation:rocket-animateOut 1s; -webkit-animation:rocket-animateOut 1s }
+@keyframes rocket-animateIn{
+0%{ bottom:-100%; background:url("../images/gift/rocket/1.png") no-repeat center }
+100%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+}
+@keyframes rocket-animateIng{
+0%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+10%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+20%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+30%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+50%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+60%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+70%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+80%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+90%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center }
+100%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center }
+}
+@keyframes rocket-animateOut{
+0%{ bottom:-10%; background:url("../images/gift/rocket/1.png") no-repeat center }
+100%{ background:url("../images/gift/rocket/3.png") no-repeat center; bottom:100% }
+}
+@-webkit-keyframes rocket-animateIn{
+0%{ bottom:-100%; background:url("../images/gift/rocket/1.png") no-repeat center }
+100%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+}
+@-webkit-keyframes rocket-animateIng{
+0%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+10%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+20%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+30%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+50%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+60%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+70%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center }
+80%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center }
+90%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center }
+100%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center }
+}
+@-webkit-keyframes rocket-animateOut{
+0%{ bottom:-10%; background:url("../images/gift/rocket/1.png") no-repeat center }
+100%{ background:url("../images/gift/rocket/3.png") no-repeat center; bottom:100% }
+}
+@media screen and (max-height:750px){
+.rocket{ background-size:100% }
+@keyframes rocket-animateIn{
+0%{ bottom:-100%; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+100%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+}@keyframes rocket-animateIng{
+ 0%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+ 10%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+ 20%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+ 30%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+ 50%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+ 60%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+ 70%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+ 80%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+ 90%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100% }
+ 100%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100% }
+ }@keyframes rocket-animateOut{
+  0%{ bottom:-10%; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+  100%{ background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100%; bottom:100% }
+  }@-webkit-keyframes rocket-animateIn{
+   0%{ bottom:-100%; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+   100%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+   }@-webkit-keyframes rocket-animateIng{
+    0%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+    10%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+    20%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+    30%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+    50%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+    60%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+    70%{ bottom:0; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+    80%{ bottom:0; background:url("../images/gift/rocket/2.png") no-repeat center; background-size:100% }
+    90%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100% }
+    100%{ bottom:0; background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100% }
+    }@-webkit-keyframes rocket-animateOut{
+     0%{ bottom:-10%; background:url("../images/gift/rocket/1.png") no-repeat center; background-size:100% }
+     100%{ background:url("../images/gift/rocket/3.png") no-repeat center; background-size:100%; bottom:100% }
+     }
+}
+.wine-animate-wrap{ width:100%; height:100%; position:fixed; overflow:hidden; top:0; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.wine-animate{ position:absolute; width:100%; height:40%; top:30%; left:-100%; background:url("../images/gift/wine/wine6.png") no-repeat center; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; backface-visibility:hidden }
+.wine-animateIn{ animation:wine-animateIn 2.5s; -webkit-animation:wine-animateIn 2.5s; animation-fill-mode:forwards }
+.wine-animateIng{ animation:wine-animateIng 1.5s infinite; -webkit-animation:wine-animateIng 1.5s infinite }
+.wine-animateOut{ animation:wine-animateOut 1s; -webkit-animation:wine-animateOut 1s; animation-fill-mode:forwards }
+@keyframes wine-animateIn{
+0%{ left:-100% }
+17%{ left:0; background:url("../images/gift/wine/wine6.png") no-repeat center; background-size:auto 100% }
+19%{ background:url("../images/gift/wine/wine7.png") no-repeat center; background-size:auto 100% }
+21%{ background:url("../images/gift/wine/wine14.png") no-repeat center; background-size:auto 100% }
+23%{ background:url("../images/gift/wine/wine8.png") no-repeat center; background-size:auto 100% }
+32%{ background:url("../images/gift/wine/wine9.png") no-repeat center; background-size:auto 100% }
+42%{ background:url("../images/gift/wine/wine13.png") no-repeat center; background-size:auto 100% }
+46%{ background:url("../images/gift/wine/wine10.png") no-repeat center; background-size:auto 100% }
+50%{ background:url("../images/gift/wine/wine11.png") no-repeat center; background-size:auto 100% }
+54%{ background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+100%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+}
+@keyframes wine-animateIng{
+0%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+100%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+}
+@keyframes wine-animateOut{
+0%{ opacity:1 }
+100%{ opacity:0 }
+}
+@-webkit-keyframes wine-animateIn{
+0%{ left:-100% }
+17%{ left:0; background:url("../images/gift/wine/wine6.png") no-repeat center; background-size:auto 100% }
+19%{ background:url("../images/gift/wine/wine7.png") no-repeat center; background-size:auto 100% }
+21%{ background:url("../images/gift/wine/wine14.png") no-repeat center; background-size:auto 100% }
+23%{ background:url("../images/gift/wine/wine8.png") no-repeat center; background-size:auto 100% }
+32%{ background:url("../images/gift/wine/wine9.png") no-repeat center; background-size:auto 100% }
+42%{ background:url("../images/gift/wine/wine13.png") no-repeat center; background-size:auto 100% }
+46%{ background:url("../images/gift/wine/wine10.png") no-repeat center; background-size:auto 100% }
+50%{ background:url("../images/gift/wine/wine11.png") no-repeat center; background-size:auto 100% }
+54%{ background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+100%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+}
+@-webkit-keyframes wine-animateIng{
+0%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+100%{ left:0; background:url("../images/gift/wine/wine12.png") no-repeat center; background-size:auto 100% }
+}
+@-webkit-keyframes wine-animateOut{
+0%{ opacity:1 }
+100%{ opacity:0 }
+}
+@media screen and (min-device-width:1023px){
+.wine-animate{ height:60%; top:20% }
+}
+.plane-animate-wrap{ overflow:hidden; position:fixed; top:0; height:100%; width:100%; text-align:center; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.plane-animate{ width:50%; margin:0 auto; transform:translate(30%, 0) rotate(-30deg) scale(0) }
+.plane-animateIn{ animation:plane-animateIn 1s; -webkit-animation:plane-animateIn 1s; animation-fill-mode:forwards }
+.plane-animateIng{ animation:plane-animateIng 2s infinite; -webkit-animation:plane-animateIng 2s infinite }
+.plane-animateOut{ animation:plane-animateOut 2s; -webkit-animation:plane-animateOut 2s; animation-fill-mode:forwards }
+@keyframes plane-animateIn{
+0%{ transform:translate(100%, 0) rotate(-30deg) scale(0) }
+100%{ transform:translate(10%, 150%) rotate(-40deg) scale(1) }
+}
+@keyframes plane-animateIng{
+0%{ transform:translate(10%, 150%) rotate(-40deg) }
+100%{ transform:translate(10%, 150%) rotate(-40deg) }
+}
+@keyframes plane-animateOut{
+0%{ transform:translate(10%, 150%) rotate(-40deg) }
+50%{ transform:translate(10%, 150%) rotate(0deg) }
+100%{ transform:translate(-190%, -60%) rotate(0deg) }
+}
+@-webkit-keyframes plane-animateIn{
+0%{ transform:translate(100%, 0) rotate(-30deg) scale(0) }
+100%{ transform:translate(10%, 150%) rotate(-40deg) scale(1) }
+}
+@-webkit-keyframes plane-animateIng{
+0%{ transform:translate(10%, 150%) rotate(-40deg) }
+100%{ transform:translate(10%, 150%) rotate(-40deg) }
+}
+@-webkit-keyframes plane-animateOut{
+0%{ transform:translate(10%, 150%) rotate(-40deg) }
+50%{ transform:translate(10%, 150%) rotate(0deg) }
+100%{ transform:translate(-190%, -60%) rotate(0deg) }
+}
+@media screen and (min-device-width:1024px){
+.plane-animate img{ transform:translate(40%, 0) rotate(-30deg) scale(0); width:60% }
+@keyframes plane-animateIn{
+0%{ transform:translate(30%, 0) rotate(-30deg) scale(0) }
+100%{ transform:translate(10%, 10%) rotate(-40deg) scale(1) }
+}@keyframes plane-animateIng{
+ 0%{ transform:translate(10%, 10%) rotate(-40deg) }
+ 100%{ transform:translate(10%, 10%) rotate(-40deg) }
+ }@keyframes plane-animateOut{
+  0%{ transform:translate(10%, 10%) rotate(-40deg) }
+  50%{ transform:translate(10%, 10%) rotate(0deg) }
+  100%{ transform:translate(-150%, -80%) rotate(0deg) }
+  }@-webkit-keyframes plane-animateIn{
+   0%{ transform:translate(30%, 0) rotate(-30deg) scale(0) }
+   100%{ transform:translate(10%, 10%) rotate(-40deg) scale(1) }
+   }@-webkit-keyframes plane-animateIng{
+    0%{ transform:translate(10%, 10%) rotate(-40deg) }
+    100%{ transform:translate(10%, 10%) rotate(-40deg) }
+    }@-webkit-keyframes plane-animateOut{
+     0%{ transform:translate(10%, 10%) rotate(-40deg) }
+     50%{ transform:translate(10%, 10%) rotate(0deg) }
+     100%{ transform:translate(-150%, -80%) rotate(0deg) }
+     }
+}
+.dolls-animate-wrap{ position:fixed; top:0; z-index:15; width:100%; height:100%; overflow:hidden; background:rgba(0, 0, 0, 0.3) }
+.dolls-animate{ width:100%; height:100%; opacity:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center }
+.dolls-animateIn{ animation:dolls-animateIn 1s; -webkit-animation:dolls-animateIn 1s; animation-fill-mode:forwards }
+.dolls-animateIng{ animation:dolls-animateIng 2s infinite; -webkit-animation:dolls-animateIng 2s infinite }
+.dolls-animateOut{ animation:dolls-animateOut .5s; -webkit-animation:dolls-animateOut .5s }
+@keyframes dolls-animateIn{
+0%{ opacity:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; -webkit-transform:scale3d(.3, .3, .3); transform:scale3d(.3, .3, .3) }
+15%{ -webkit-transform:scale3d(1.1, 1.1, 1.1); transform:scale3d(1.1, 1.1, 1.1) }
+30%{ -webkit-transform:scale3d(.9, .9, .9); transform:scale3d(.9, .9, .9) }
+45%{ opacity:1; -webkit-transform:scale3d(1.03, 1.03, 1.03); transform:scale3d(1.03, 1.03, 1.03) }
+60%{ -webkit-transform:scale3d(.97, .97, .97); transform:scale3d(.97, .97, .97) }
+75%{ opacity:1; -webkit-transform:scale3d(1.01, 1.01, 1.01); transform:scale3d(1.01, 1.01, 1.01) }
+90%{ -webkit-transform:scale3d(.99, .99, .99); transform:scale3d(.99, .99, .99) }
+100%{ opacity:1; -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1) }
+}
+@keyframes dolls-animateIng{
+0%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center }
+18%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(0deg) }
+36%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg) }
+54%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg) }
+72%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg) }
+90%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg) }
+100%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(0deg) }
+}
+@keyframes dolls-animateOut{
+0%{ opacity:1 }
+100%{ left:0; opacity:0 }
+}
+@-webkit-keyframes dolls-animateIn{
+0%{ opacity:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; -webkit-transform:scale3d(.3, .3, .3); transform:scale3d(.3, .3, .3) }
+15%{ -webkit-transform:scale3d(1.1, 1.1, 1.1); transform:scale3d(1.1, 1.1, 1.1) }
+30%{ -webkit-transform:scale3d(.9, .9, .9); transform:scale3d(.9, .9, .9) }
+45%{ opacity:1; -webkit-transform:scale3d(1.03, 1.03, 1.03); transform:scale3d(1.03, 1.03, 1.03) }
+60%{ -webkit-transform:scale3d(.97, .97, .97); transform:scale3d(.97, .97, .97) }
+75%{ opacity:1; -webkit-transform:scale3d(1.01, 1.01, 1.01); transform:scale3d(1.01, 1.01, 1.01) }
+90%{ -webkit-transform:scale3d(.99, .99, .99); transform:scale3d(.99, .99, .99) }
+100%{ opacity:1; -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1) }
+}
+@-webkit-keyframes dolls-animateIng{
+0%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center }
+18%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(0deg) }
+36%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg) }
+54%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg) }
+72%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg) }
+90%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg) }
+100%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(0deg) }
+}
+@-webkit-keyframes dolls-animateOut{
+0%{ opacity:1 }
+100%{ left:0; opacity:0 }
+}
+@media screen and (min-device-width:1024px){
+.dolls-animate{ background:url("../images/gift/dolls/dolls1.png") no-repeat center; background-size:auto 70% }
+@keyframes dolls-animateIn{
+0%{ opacity:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; background-size:auto 70%; -webkit-transform:scale3d(.3, .3, .3); transform:scale3d(.3, .3, .3) }
+15%{ -webkit-transform:scale3d(1.1, 1.1, 1.1); transform:scale3d(1.1, 1.1, 1.1) }
+30%{ -webkit-transform:scale3d(.9, .9, .9); transform:scale3d(.9, .9, .9) }
+45%{ opacity:1; -webkit-transform:scale3d(1.03, 1.03, 1.03); transform:scale3d(1.03, 1.03, 1.03) }
+60%{ -webkit-transform:scale3d(.97, .97, .97); transform:scale3d(.97, .97, .97) }
+75%{ opacity:1; -webkit-transform:scale3d(1.01, 1.01, 1.01); transform:scale3d(1.01, 1.01, 1.01) }
+90%{ -webkit-transform:scale3d(.99, .99, .99); transform:scale3d(.99, .99, .99) }
+100%{ opacity:1; -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1) }
+}@keyframes dolls-animateIng{
+ 0%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; background-size:auto 70% }
+ 18%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(0deg); background-size:auto 70% }
+ 36%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg); background-size:auto 70% }
+ 54%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg); background-size:auto 70% }
+ 72%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg); background-size:auto 70% }
+ 90%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg); background-size:auto 70% }
+ 100%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(0deg); background-size:auto 70% }
+ }@keyframes dolls-animateOut{
+  0%{ opacity:1 }
+  100%{ left:0; opacity:0 }
+  }@-webkit-keyframes dolls-animateIn{
+   0%{ opacity:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; background-size:auto 70%; -webkit-transform:scale3d(.3, .3, .3); transform:scale3d(.3, .3, .3) }
+   15%{ -webkit-transform:scale3d(1.1, 1.1, 1.1); transform:scale3d(1.1, 1.1, 1.1) }
+   30%{ -webkit-transform:scale3d(.9, .9, .9); transform:scale3d(.9, .9, .9) }
+   45%{ opacity:1; -webkit-transform:scale3d(1.03, 1.03, 1.03); transform:scale3d(1.03, 1.03, 1.03) }
+   60%{ -webkit-transform:scale3d(.97, .97, .97); transform:scale3d(.97, .97, .97) }
+   75%{ opacity:1; -webkit-transform:scale3d(1.01, 1.01, 1.01); transform:scale3d(1.01, 1.01, 1.01) }
+   90%{ -webkit-transform:scale3d(.99, .99, .99); transform:scale3d(.99, .99, .99) }
+   100%{ opacity:1; -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1) }
+   }@-webkit-keyframes dolls-animateIng{
+    0%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; background-size:auto 70% }
+    18%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(0deg); background-size:auto 70% }
+    36%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg); background-size:auto 70% }
+    54%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg); background-size:auto 70% }
+    72%{ opacity:1; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(-15deg); background-size:auto 70% }
+    90%{ opacity:1; background:url("../images/gift/dolls/dolls1.png") no-repeat center; transform:rotate(15deg); background-size:auto 70% }
+    100%{ opacity:1; left:0; background:url("../images/gift/dolls/dolls2.png") no-repeat center; transform:rotate(0deg); background-size:auto 70% }
+    }@-webkit-keyframes dolls-animateOut{
+     0%{ opacity:1 }
+     100%{ left:0; opacity:0 }
+     }
+}
+.ttq-animate-wrap{ position:fixed; top:0; width:100%; height:100%; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.ttq-animate{ position:absolute; left:-100%; width:60%; margin:50% auto 0 auto; opacity:0 }
+.ttq-animateIn{ animation:ttq-animateIn 1.5s; -webkit-animation:ttq-animateIn 1.5s; animation-fill-mode:forwards }
+.ttq-animateIng{ animation:ttq-animateIng 1.5s infinite; -webkit-animation:ttq-animateIng 1.5s infinite }
+.ttq-animateOut{ animation:ttq-animateOut 1s; -webkit-animation:ttq-animateOut 1s; animation-fill-mode:forwards }
+@keyframes ttq-animateIn{
+0%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); opacity:0; left:-100% }
+15%{ left:0; right:0 }
+30%{ -webkit-transform:scale3d(1.25, .75, 1); transform:scale3d(1.25, .75, 1); opacity:1 }
+45%{ -webkit-transform:scale3d(0.75, 1.25, 1); transform:scale3d(0.75, 1.25, 1) }
+50%{ -webkit-transform:scale3d(1.15, .85, 1); transform:scale3d(1.15, .85, 1) }
+65%{ -webkit-transform:scale3d(.95, 1.05, 1); transform:scale3d(.95, 1.05, 1) }
+80%{ -webkit-transform:scale3d(1.05, .95, 1); transform:scale3d(1.05, .95, 1) }
+95%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); left:0; right:0; opacity:1 }
+100%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); left:0; right:0; opacity:1 }
+}
+@keyframes ttq-animateIng{
+0%{ opacity:1; transform:scale(1); left:0; right:0 }
+50%{ opacity:1; transform:scale(1.2); left:0; right:0 }
+100%{ opacity:1; transform:scale(1); left:0; right:0 }
+}
+@keyframes ttq-animateOut{
+0%{ opacity:1; left:0; right:0 }
+100%{ left:0; right:0; opacity:0 }
+}
+@-webkit-keyframes ttq-animateIn{
+0%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); opacity:0; left:-100% }
+15%{ left:0; right:0 }
+30%{ -webkit-transform:scale3d(1.25, .75, 1); transform:scale3d(1.25, .75, 1); opacity:1 }
+45%{ -webkit-transform:scale3d(0.75, 1.25, 1); transform:scale3d(0.75, 1.25, 1) }
+50%{ -webkit-transform:scale3d(1.15, .85, 1); transform:scale3d(1.15, .85, 1) }
+65%{ -webkit-transform:scale3d(.95, 1.05, 1); transform:scale3d(.95, 1.05, 1) }
+80%{ -webkit-transform:scale3d(1.05, .95, 1); transform:scale3d(1.05, .95, 1) }
+95%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); left:0; right:0; opacity:1 }
+100%{ -webkit-transform:scale3d(1, 1, 1); transform:scale3d(1, 1, 1); left:0; right:0; opacity:1 }
+}
+@-webkit-keyframes ttq-animateIng{
+0%{ opacity:1; transform:scale(1); left:0; right:0 }
+50%{ opacity:1; transform:scale(1.2); left:0; right:0 }
+100%{ opacity:1; transform:scale(1); left:0; right:0 }
+}
+@-webkit-keyframes ttq-animateOut{
+0%{ opacity:1; left:0; right:0 }
+100%{ left:0; right:0; opacity:0 }
+}
+@media (min-device-width:1024px){
+.ttq-animate{ margin:5% auto; width:40% }
+}
+.car-animate-wrap{ position:fixed; top:0; overflow:hidden; height:100%; width:100%; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.car-animate{ position:fixed; left:-100%; height:100%; width:100%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+.car-animateIn{ animation:car-animateIn 3s; -webkit-animation:car-animateIn 3s; animation-fill-mode:forwards }
+.car-animateIng{ animation:car-animateIng .5s infinite; -webkit-animation:car-animateIng .5s infinite }
+.car-animateOut{ animation:car-animateOut 1s; -webkit-animation:car-animateOut 1s }
+@keyframes car-animateIn{
+0%{ left:-100%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+15%{ left:-25%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+40%{ left:-10%; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+50%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+60%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+70%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+80%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+90%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+}
+@keyframes car-animateIng{
+0%{ left:0; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+}
+@keyframes car-animateOut{
+0%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+100%{ left:100%; background:url("../images/gift/car/car3.png") no-repeat center; background-size:100% }
+}
+@-webkit-keyframes car-animateIn{
+0%{ left:-100%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+15%{ left:-25%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+40%{ left:-10%; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+50%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+60%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+70%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+80%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+90%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+}
+@-webkit-keyframes car-animateIng{
+0%{ left:0; background:url("../images/gift/car/car1.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+}
+@-webkit-keyframes car-animateOut{
+0%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:100% }
+100%{ left:100%; background:url("../images/gift/car/car3.png") no-repeat center; background-size:100% }
+}
+@media screen and (min-device-width:1024px){
+@keyframes car-animateIn{
+0%{ left:-100%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+15%{ left:-25%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+40%{ left:-10%; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+50%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+60%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+70%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+80%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+90%{ left:0; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+100%{ left:0; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+}@keyframes car-animateIng{
+ 0%{ left:0; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+ 100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+ }@keyframes car-animateOut{
+  0%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+  100%{ left:100%; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+  }@-webkit-keyframes car-animate{
+   0%{ left:-100%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+   15%{ left:-25%; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+   40%{ left:-10%; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+   50%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+   60%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+   70%{ background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+   80%{ background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+   90%{ left:0; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+   100%{ left:0; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+   }@-webkit-keyframes car-animateIng{
+    0%{ left:0; background:url("../images/gift/car/car1.png") no-repeat center; background-size:80% }
+    100%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+    }@-webkit-keyframes car-animateOut{
+     0%{ left:0; background:url("../images/gift/car/car2.png") no-repeat center; background-size:80% }
+     100%{ left:100%; background:url("../images/gift/car/car3.png") no-repeat center; background-size:80% }
+     }
+}
+.coin-animate-wrap{ position:fixed; top:0; height:100%; width:100%; overflow:hidden; z-index:15; background:rgba(0, 0, 0, 0.3) }
+.coin-animate{ position:absolute; height:100%; width:100%; left:-100%; background:url("../images/gift/coin/1.png") no-repeat center; background-size:100% }
+.coin-animateIn{ animation:coin-animateIn 1s; -webkit-animation:coin-animateIn 1s; animation-fill-mode:forwards }
+.coin-animateIng{ animation:coin-animateIng 2s infinite; -webkit-animation:coin-animateIng 2s infinite }
+.coin-animateOut{ animation:coin-animateOut 1s; -webkit-animation:coin-animateOut 1s }
+@keyframes coin-animateIn{
+0%{ left:-100%; background:url("../images/gift/coin/1.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:100% }
+}
+@keyframes coin-animateIng{
+0%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:100% }
+20%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:100% }
+30%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:100% }
+40%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:100% }
+50%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:100% }
+60%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:100% }
+70%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:100% }
+80%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:100% }
+90%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/coin/1.png") no-repeat center; background-size:100% }
+}
+@keyframes coin-animateOut{
+0%{ opacity:1 }
+100%{ opacity:0 }
+}
+@-webkit-keyframes coin-animateIn{
+0%{ left:-100%; background:url("../images/gift/coin/1.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:100% }
+}
+@-webkit-keyframes coin-animateIng{
+0%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:100% }
+20%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:100% }
+30%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:100% }
+40%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:100% }
+50%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:100% }
+60%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:100% }
+70%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:100% }
+80%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:100% }
+90%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:100% }
+100%{ left:0; background:url("../images/gift/coin/1.png") no-repeat center; background-size:100% }
+}
+@-webkit-keyframes coin-animateOut{
+0%{ opacity:1 }
+100%{ opacity:0 }
+}
+@media screen and (min-device-width:1024px){
+@keyframes coin-animateIn{
+0%{ left:-100%; background:url("../images/gift/coin/1.png") no-repeat center; background-size:80% }
+100%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:80% }
+}@keyframes coin-animateIng{
+ 0%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:80% }
+ 20%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:80% }
+ 30%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:80% }
+ 40%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:80% }
+ 50%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:80% }
+ 60%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:80% }
+ 70%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:80% }
+ 80%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:80% }
+ 90%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:80% }
+ 100%{ left:0; background:url("../images/gift/coin/1.png") no-repeat center; background-size:80% }
+ }@keyframes coin-animateOut{
+  0%{ opacity:1 }
+  100%{ opacity:0 }
+  }@-webkit-keyframes coin-animateIn{
+   0%{ left:-100%; background:url("../images/gift/coin/1.png") no-repeat center; background-size:80% }
+   100%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:80% }
+   }@-webkit-keyframes coin-animateIng{
+    0%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:80% }
+    20%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:80% }
+    30%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:80% }
+    40%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:80% }
+    50%{ left:0; background:url("../images/gift/coin/6.png") no-repeat center; background-size:80% }
+    60%{ left:0; background:url("../images/gift/coin/5.png") no-repeat center; background-size:80% }
+    70%{ left:0; background:url("../images/gift/coin/4.png") no-repeat center; background-size:80% }
+    80%{ left:0; background:url("../images/gift/coin/3.png") no-repeat center; background-size:80% }
+    90%{ left:0; background:url("../images/gift/coin/2.png") no-repeat center; background-size:80% }
+    100%{ left:0; background:url("../images/gift/coin/1.png") no-repeat center; background-size:80% }
+    }@-webkit-keyframes coin-animateOut{
+     0%{ opacity:1 }
+     100%{ opacity:0 }
+     }
+}
+.ship-animate-wrap{ position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.5); z-index:15 }
+.ship-animate{ position:fixed; height:5rem; width:100%; top:0; bottom:0; margin:auto }
+.ship-animate-wrap img{ position:absolute; left:-200%; right:0; bottom:1.4rem; width:95%; margin:0 auto }
+.ship-animateIn img{ animation:ship-animateIn 1s; -webkit-animation:ship-animateIn 1s; -webkit-animation-fill-mode:forwards }
+.ship-animateIn img + .water1{ animation:waterIn 3s infinite; -webkit-animation:waterIn 3s infinite }
+.ship-animateIn img + .water1 + .water2{ animation:waterIn 2.5s infinite; -webkit-animation:waterIn 2.5s infinite }
+.ship-animateIng img{ animation:ship-animateIng 2.5s infinite; -webkit-animation:ship-animateIng 2.5s infinite }
+.ship-animateIng img + .water1{ animation:water1 2s infinite; -webkit-animation:water1 2s infinite }
+.ship-animateIng img + .water1 + .water2{ animation:water 2.5s infinite; -webkit-animation:water 2.5s infinite }
+.ship-animateOut img{ animation:ship-animateOut 1.5s; -webkit-animation:ship-animateOut 1.5s; animation-fill-mode:forwards }
+.ship-animateOut img + .water1{ animation:water1Out 2s; -webkit-animation:water1Out 2s; animation-fill-mode:forwards }
+.ship-animateOut img + .water1 + .water2{ animation:water1Out 2s; -webkit-animation:water1Out 2s; animation-fill-mode:forwards }
+.water1{ position:absolute; background:url('../images/gift/ship/water_bg1.png') center no-repeat; bottom:0; width:100%; height:3.2rem; background-size:100% 100%; transform:rotate(0deg); z-index:3 }
+.water2{ position:absolute; background:url('../images/gift/ship/water_bg2.png') center no-repeat; bottom:0; width:100%; height:3.2rem; background-size:100% 100%; z-index:3 }
+@keyframes ship-animateIn{
+0%{ left:-200%; transform:rotate(-5deg) }
+50%{ transform:rotate(-5deg) }
+100%{ left:0; transform:rotate(0deg) }
+}
+@-webkit-keyframes ship-animateIn{
+0%{ left:-200%; transform:rotate(-5deg) }
+50%{ transform:rotate(-5deg) }
+100%{ left:0; transform:rotate(0deg) }
+}
+@keyframes ship-animateIng{
+0%{ left:0; transform:translateY(0) }
+50%{ transform:translateY(5px) }
+100%{ left:0; transform:translateY(0) }
+}
+@-webkit-keyframes ship-animateIng{
+0%{ left:0; transform:translateY(0) }
+50%{ transform:translateY(5px) }
+100%{ left:0; transform:translateY(0) }
+}
+@keyframes ship-animateOut{
+0%{ left:0; transform:rotate(0deg) }
+30%{ left:0; transform:rotate(-5deg) }
+100%{ transform:rotate(-5deg); left:100% }
+}
+@-webkit-keyframes ship-animateOut{
+0%{ left:0; transform:rotate(0deg) }
+30%{ left:0; transform:rotate(-5deg) }
+100%{ transform:rotate(-5deg); left:100% }
+}
+@keyframes water{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px) }
+100%{ transform:translate(0) }
+}
+@-webkit-keyframes water{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px) }
+100%{ transform:translate(0) }
+}
+@keyframes water1{
+0%{ transform:translate(0) }
+50%{ transform:translate(-10px) }
+100%{ transform:translate(0) }
+}
+@-webkit-keyframes water1{
+0%{ transform:translate(0) }
+50%{ transform:translate(-10px) }
+100%{ transform:translate(0) }
+}
+@keyframes waterIn{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px) }
+100%{ transform:translate(0) }
+}
+@-webkit-keyframes waterIn{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px) }
+100%{ transform:translate(0) }
+}
+@keyframes water1Out{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px); opacity:1 }
+100%{ transform:translate(0); opacity:0 }
+}
+@-webkit-keyframes water1Out{
+0%{ transform:translate(0) }
+50%{ transform:translate(10px); opacity:1 }
+100%{ transform:translate(0); opacity:0 }
+}
+@media screen and (min-device-width:1024px){
+.ship-animate{ height: 31vw; }
+.ship-animate-wrap img{ bottom:.8rem; width:70% }
+.water1, .water2{ height: 12vw; }
+@keyframes ship-animateIn{
+0%{ left:-200%; transform:rotate(-5deg) }
+50%{ transform:rotate(-5deg) }
+100%{ left:0; right:0; transform:rotate(0deg) }
+}@-webkit-keyframes ship-animateIn{
+ 0%{ left:-200%; transform:rotate(-5deg) }
+ 50%{ transform:rotate(-5deg) }
+ 100%{ left:0; right:0; transform:rotate(0deg) }
+ }@keyframes ship-animateIng{
+  0%{ left:0; right:0; transform:translateY(0) }
+  50%{ transform:translateY(10px) }
+  100%{ left:0; right:0; transform:translateY(0) }
+  }@-webkit-keyframes ship-animateIng{
+   0%{ left:0; right:0; transform:translateY(0) }
+   50%{ transform:translateY(10px) }
+   100%{ left:0; right:0; transform:translateY(0) }
+   }@keyframes ship-animateOut{
+    0%{ left:0; transform:rotate(0deg) }
+    30%{ left:0; transform:rotate(-5deg) }
+    100%{ transform:rotate(-5deg); left:100% }
+    }@-webkit-keyframes ship-animateOut{
+     0%{ left:0; transform:rotate(0deg) }
+     30%{ left:0; transform:rotate(-5deg) }
+     100%{ transform:rotate(-5deg); left:100% }
+     }@keyframes water{
+      0%{ transform:translate(0) }
+      50%{ transform:translate(30px) }
+      100%{ transform:translate(0) }
+      }@-webkit-keyframes water{
+       0%{ transform:translate(0) }
+       50%{ transform:translate(30px) }
+       100%{ transform:translate(0) }
+       }@keyframes waterIn{
+        0%{ transform:translate(0) }
+        50%{ transform:translate(30px) }
+        100%{ transform:translate(0) }
+        }@-webkit-keyframes waterIn{
+         0%{ transform:translate(0) }
+         50%{ transform:translate(30px) }
+         100%{ transform:translate(0) }
+         }@keyframes water1Out{
+          0%{ transform:translate(0) }
+          50%{ transform:translate(30px); opacity:1 }
+          100%{ transform:translate(0); opacity:0 }
+          }@-webkit-keyframes water1Out{
+           0%{ transform:translate(0) }
+           50%{ transform:translate(30px); opacity:1 }
+           100%{ transform:translate(0); opacity:0 }
+           }
+}
+.island-animate-wrap{ position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.5); z-index:15 }
+.island-animate{ position:fixed; bottom:-100%; margin:auto; height:7rem; width:100%; left:0; right:0 }
+.island-animate > img{ display:inline-block; width:100%; margin-top:3rem; position:absolute }
+.island-animate > div{ position:absolute }
+.island-animate > div img{ width:100% }
+.island-animate .bird1{ left:.8rem; height:.5rem; width:1.5rem; top:1rem }
+.island-animate .bird2{ height:.5rem; width:1.5rem; top:1.5rem; right:60% }
+.island-animate .bird3{ right:15%; height:.5rem; width:1.5rem; top:1.3rem }
+.island-animate .cloud1{ height:.8rem; width:3rem; top:0; right:-.8rem }
+.island-animate .cloud2{ left:20%; height:.8rem; width:3rem; top:0 }
+.island-animate .cloud3{ height:.8rem; width:2rem; top:-.5rem; left:-.6rem }
+.island-animate .cloud4{ right:23%; height:.8rem; width:2.5rem; top:-1rem }
+.island-animate .tree{ left:15%; width:2.5rem; top:35%; transform-origin:50% 100% }
+.island-animateIn{ animation:island-animateIn 1s; -webkit-animation:island-animateIn 1s; -webkit-animation-fill-mode:forwards }
+.island-animateIng{ animation:island-animateIng 1s; -webkit-animation:island-animateIng 1s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .bird1, .island-animateOut .bird1{ animation:bird1 20s; -webkit-animation:bird1 20s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .bird2, .island-animateOut .bird2{ animation:bird2 18s linear; -webkit-animation:bird2 18s linear; -webkit-animation-fill-mode:forwards }
+.island-animateIng .bird3, .island-animateOut .bird3{ animation:bird3 20s; -webkit-animation:bird3 20s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .cloud1, .island-animateOut .cloud1{ animation:cloud 15s; -webkit-animation:cloud 15s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .cloud2, .island-animateOut .cloud2{ animation:cloud 18s; -webkit-animation:cloud 18s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .cloud3, .island-animateOut .cloud3{ animation:cloud 20s; -webkit-animation:cloud 20s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .cloud4, .island-animateOut .cloud4{ animation:cloud 22s; -webkit-animation:cloud 22s; -webkit-animation-fill-mode:forwards }
+.island-animateIng .tree, .island-animateOut .tree{ animation:tree 4s infinite; -webkit-animation:tree 4s infinite }
+.island-animateOut{ animation:island-animateOut 2s; -webkit-animation:island-animateOut 2s; -webkit-animation-fill-mode:forwards }
+@keyframes island-animateIn{
+0%{ bottom:-100%; top:100% }
+100%{ bottom:0; top:0 }
+}
+@-webkit-keyframes island-animateIn{
+0%{ bottom:-100%; top:100% }
+100%{ bottom:0; top:0 }
+}
+@keyframes island-animateIng{
+0%{ bottom:0; top:0 }
+100%{ bottom:0; top:0 }
+}
+@-webkit-keyframes island-animateIng{
+0%{ bottom:0; top:0 }
+100%{ bottom:0; top:0 }
+}
+@keyframes bird1{
+0%{ transform:translate(0, 0) }
+100%{ transform:translate(-1rem, -.5rem) }
+}
+@-webkit-keyframes bird1{
+0%{ transform:translate(0, 0) }
+100%{ transform:translate(-1rem, -.5rem) }
+}
+@keyframes bird2{
+0%{ transform:translate(0, 0) }
+25%{ transform:translate(.5rem, .5rem) }
+50%{ transform:translate(1.5rem, -.5rem) }
+75%{ transform:translate(2.2rem, .5rem) }
+100%{ transform:translate(2.8rem, -.3rem) }
+}
+@-webkit-keyframes bird2{
+0%{ transform:translate(0, 0) }
+25%{ transform:translate(.5rem, .5rem) }
+50%{ transform:translate(1.5rem, -.5rem) }
+75%{ transform:translate(2.2rem, .5rem) }
+100%{ transform:translate(2.8rem, -.3rem) }
+}
+@keyframes bird3{
+0%{ transform:translate(0) }
+100%{ transform:translate(1.5rem, -.8rem) }
+}
+@-webkit-keyframes bird3{
+0%{ transform:translate(0) }
+100%{ transform:translate(1.5rem, -.8rem) }
+}
+@keyframes cloud{
+0%{ transform:translate(0) }
+100%{ transform:translate(2.1rem) }
+}
+@-webkit-keyframes cloud{
+0%{ transform:translate(0) }
+100%{ transform:translate(2.1rem) }
+}
+@keyframes tree{
+0%{ transform:rotate(0deg) }
+50%{ transform:rotate(-5deg) }
+100%{ transform:rotate(0deg) }
+}
+@-webkit-keyframes tree{
+0%{ transform:rotate(0deg) }
+50%{ transform:rotate(-5deg) }
+100%{ transform:rotate(0deg) }
+}
+@keyframes island-animateOut{
+0%{ bottom:0; top:0 }
+100%{ bottom:-100%; top:100% }
+}
+@-webkit-keyframes island-animateOut{
+0%{ bottom:0; top:0 }
+100%{ bottom:-100%; top:100% }
+}
+@media screen and (min-device-width:1024px){
+.island-animate{ width:60%; height: 17vw }
+.island-animate > img{ margin-top:1.5rem }
+.island-animate .bird1{ top: 0; width: 10vw }
+.island-animate .bird2{ top: -5vw; right:50%; width: 12vw }
+.island-animate .bird3{ top: -2vw; width: 8vw }
+.island-animate .cloud1{ top: -8vw; right: -1vw; width: 15vw }
+.island-animate .cloud2{ top: -12vw; width: 15vw; left: 10%; }
+.island-animate .cloud3{ top: -8vw; left: -10vw; width: 12vw }
+.island-animate .cloud4{ top: -9vw; width: 13vw }
+.island-animate .tree{ top: 3.5vw; width: 9vw; transform-origin:50% 100% }
+@keyframes bird1{
+0%{ transform:translate(0, 0) }
+100%{ transform:translate(-90px, -50px) }
+}@-webkit-keyframes bird1{
+ 0%{ transform:translate(0, 0) }
+ 100%{ transform:translate(-90px, -50px) }
+ }@keyframes bird2{
+  0%{ transform:translate(0, 0) }
+  25%{ transform:translate(30px, 20px) }
+  50%{ transform:translate(90px, -40px) }
+  75%{ transform:translate(150px, 30px) }
+  100%{ transform:translate(190px, -50px) }
+  }@-webkit-keyframes bird2{
+   0%{ transform:translate(0, 0) }
+   25%{ transform:translate(30px, 20px) }
+   50%{ transform:translate(90px, -40px) }
+   75%{ transform:translate(150px, 30px) }
+   100%{ transform:translate(190px, -50px) }
+   }@keyframes bird3{
+    0%{ transform:translate(0) }
+    100%{ transform:translate(180px, 80px) }
+    }@-webkit-keyframes bird3{
+     0%{ transform:translate(0) }
+     100%{ transform:translate(180px, 80px) }
+     }@keyframes cloud{
+      0%{ transform:translate(0) }
+      100%{ transform:translate(150px) }
+      }@-webkit-keyframes cloud{
+       0%{ transform:translate(0) }
+       100%{ transform:translate(150px) }
+       }
+}
+.cruise-animate-wrap{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:15; background:rgba(0, 0, 0, 0.5) }
+.cruise-animate{ text-align:center; height: 30vw; width:100%; position:fixed; top:0; bottom:0; right:0; left:0; margin:auto }
+.cruise-animate img{ display:inline-block; width:80%; transform-origin:0 100% }
+.cruise-animateIn img{ animation:cruise-animateIn 3s; -webkit-animation:cruise-animateIn 3s; -webkit-animation-fill-mode:forwards }
+.cruise-animateIng img{ animation:cruise-animateIng 8s infinite; -webkit-animation:cruise-animateIng 8s infinite }
+.water{ position:absolute; bottom:-3.5vw; height: 12vw; width:100%; background:url("../images/gift/cruise/water_bg.png") no-repeat center; background-size:100% 100% }
+.water + div{ bottom:-4vw; background:url("../images/gift/cruise/water_bg1.png") no-repeat center; background-size:100% 100% }
+.cruise-animateIn .water{ animation:waterIn 3s infinite; -webkit-animation:waterIn 3s infinite }
+.cruise-animateIn .water + div{ animation:waterIn 2.5s .5s infinite; -webkit-animation:waterIn 2.5s .5s infinite }
+.cruise-animateIng .water{ animation:waterIng 8s infinite; -webkit-animation:waterIng 8s infinite }
+.cruise-animateOut img{ animation:cruise-animateOut 3s; -webkit-animation:cruise-animateOut 3s; animation-fill-mode:forwards }
+.cruise-animateOut .water{ animation:waterOut 2.5s; -webkit-animation:waterOut 2.5s; animation-fill-mode:forwards }
+@keyframes cruise-animateIn{
+0%{ transform:translate(-100%, 0) scale(0, 0) }
+10%{ transform:translate(-50%, 0) scale(0, 0) }
+100%{ transform:translate(50px) scale(1, 1) }
+}
+@-webkit-keyframes cruise-animateIn{
+0%{ transform:translate(-100%, 0) scale(0, 0) }
+100%{ transform:translate(50px) scale(1, 1) }
+}
+@keyframes cruise-animateIng{
+0%{ transform:translate(50px, 0) }
+25%{ transform:translate(50px, -25px) }
+50%{ transform:translate(50px, 0px) }
+75%{ transform:translate(50px, -25px) }
+100%{ transform:translate(50px, 0) }
+}
+@-webkit-keyframes cruise-animateIng{
+0%{ transform:translate(50px, 0) }
+25%{ transform:translate(50px, -25px) }
+50%{ transform:translate(50px, 0px) }
+75%{ transform:translate(50px, -25px) }
+100%{ transform:translate(50px, 0) }
+}
+@keyframes waterIng{
+0%{ transform:translateY(0) }
+25%{ transform:translateY(-25px) }
+50%{ transform:translateY(0px) }
+75%{ transform:translateY(-25px) }
+100%{ transform:translateY(0) }
+}
+@-webkit-keyframes waterIng{
+0%{ transform:translateY(0) }
+25%{ transform:translateY(-25px) }
+50%{ transform:translateY(0px) }
+75%{ transform:translateY(-25px) }
+100%{ transform:translateY(0) }
+}
+@keyframes waterIn{
+0%{ transform:translate(0) }
+50%{ transform:translate(25px) }
+100%{ transform:translate(0px) }
+}
+@-webkit-keyframes waterIn{
+0%{ transform:translate(0) }
+50%{ transform:translate(25px) }
+100%{ transform:translate(0px) }
+}
+@keyframes cruise-animateOut{
+0%{ transform:translate(50px) }
+100%{ transform:translate(120%) }
+}
+@-webkit-keyframes cruise-animateOut{
+0%{ transform:translate(50px) }
+100%{ transform:translate(120%) }
+}
+@keyframes waterOut{
+0%{ transform:translateY(0) }
+50%{ transform:translateY(-15px) }
+75%{ opacity:1 }
+100%{ transform:translateY(0); opacity:0 }
+}
+@-webkit-keyframes waterOut{
+0%{ transform:translateY(0) }
+50%{ transform:translateY(-15px) }
+75%{ opacity:1 }
+100%{ transform:translateY(0); opacity:0 }
+}
+@media screen and (max-width:1024px){
+.cruise-animateIng .water{ animation:waterIng 8s infinite }
+@keyframes cruise-animateIn{
+0%{ transform:translate(-100%, 0) scale(0, 0) }
+10%{ transform:translate(-100%, 0) scale(0, 0) }
+100%{ transform:translate(20px) scale(1, 1) }
+}@-webkit-keyframes cruise-animateIn{
+ 0%{ transform:translate(-100%, 0) scale(0, 0) }
+ 10%{ transform:translate(-100%, 0) scale(0, 0) }
+ 100%{ transform:translate(20px) scale(1, 1) }
+ }@keyframes cruise-animateIng{
+  0%{ transform:translate(20px, 0) }
+  25%{ transform:translate(20px, -10px) }
+  50%{ transform:translate(20px, 0px) }
+  75%{ transform:translate(20px, -10px) }
+  100%{ transform:translate(20px, 0) }
+  }@-webkit-keyframes cruise-animateIng{
+   0%{ transform:translate(20px, 0) }
+   25%{ transform:translate(20px, -10px) }
+   50%{ transform:translate(20px, 0px) }
+   75%{ transform:translate(20px, -10px) }
+   100%{ transform:translate(20px, 0) }
+   }@keyframes waterIn{
+    0%{ transform:translate(0) }
+    50%{ transform:translate(-25px) }
+    100%{ transform:translate(0px) }
+    }@-webkit-keyframes waterIn{
+     0%{ transform:translate(0) }
+     50%{ transform:translate(-25px) }
+     100%{ transform:translate(0px) }
+     }@keyframes waterIng{
+      0%{ transform:translateY(0) }
+      25%{ transform:translateY(-15px) }
+      50%{ transform:translateY(0px) }
+      75%{ transform:translateY(-15px) }
+      100%{ transform:translateY(0) }
+      }@-webkit-keyframes waterIng{
+       0%{ transform:translateY(0) }
+       25%{ transform:translateY(-15px) }
+       50%{ transform:translateY(0px) }
+       75%{ transform:translateY(-15px) }
+       100%{ transform:translateY(0) }
+       }@keyframes cruise-animateOut{
+        0%{ transform:translate(20px) }
+        100%{ transform:translate(120%) }
+        }@-webkit-keyframes cruise-animateOut{
+         0%{ transform:translate(20px) }
+         100%{ transform:translate(120%) }
+         }@keyframes waterOut{
+          0%{ transform:translateY(0) }
+          50%{ transform:translateY(-10px) }
+          75%{ opacity:1 }
+          100%{ transform:translateY(0); opacity:0 }
+          }@-webkit-keyframes waterOut{
+           0%{ transform:translateY(0) }
+           50%{ transform:translateY(-10px) }
+           75%{ opacity:1 }
+           100%{ transform:translateY(0); opacity:0 }
+           }
+}
