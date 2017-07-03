@@ -92,7 +92,7 @@
 .cucumber-animateIng{ animation:cucumber-animateIng 1s infinite; -webkit-animation:cucumber-animateIng 1s infinite }
 .cucumber-animateOut{ animation:cucumber-animateOut .5s; -webkit-animation:cucumber-animateOut .5s }
 @-webkit-keyframes cucumber-animateIn{
-0%{ left:-100%; transform:rotate(30deg) }
+ 0%{ left:-100%; transform:rotate(30deg) }
 10%{ left:-50%; background:url("../images/gift/cucumber/hg-c.png") no-repeat center; transform:rotate(30deg); background-size:auto 90% }
 12%{ background:url("../images/gift/cucumber/hg-o.png") no-repeat center; background-size:auto 90% }
 14%{ background:url("../images/gift/cucumber/hg-c.png") no-repeat center; background-size:auto 90% }
@@ -983,7 +983,7 @@
 }
 
 /*kiss*/
-.kiss-wrap{ position: absolute; top: 0; left: 0; width: 100%; height:100%; background: rgba(0,0,0,0.5); z-index: 15; }
+.kiss-animate-wrap{ position: absolute; top: 0; left: 0; width: 100%; height:100%; background: rgba(0,0,0,0.5); z-index: 15; }
 .kiss-content{ position: relative; width: 80%; height:100%; margin: 0 auto; background: url(../images/gift/kiss/kiss1.png) center no-repeat; background-size: 100%; }
 .kiss-content > img{ position: absolute; opacity: 0; }
 .kiss-content > img:first-of-type{ left: -10%; top: 50%; width: 10vw; }
@@ -999,11 +999,11 @@
 .kiss-content > img:nth-of-type(11){ right: 4%; top: 40%; width: 5vw; }
 .kiss-content > img:nth-of-type(12){ left: 4%; top: 25%; width: 7vw; }
 .kiss-content > img:nth-of-type(13){ right: 6%; top: 30%; width: 5vw; }
-.kiss-animateIn .kiss-content{ animation: kiss-animateIn 1s forwards; -webkit-animation: kiss-animateIn 1s forwards; }
-.kiss-animateIng .kiss-content{ animation: kiss-animateIng 2s infinite; -webkit-animation: kiss-animateIng 2s infinite; }
-.kiss-animateOut .kiss-content{ animation: kiss-animateOut 1s forwards; -webkit-animation: kiss-animateOut 1s forwards; }
-.kiss-animateIng .kiss-content img{ animation-name: heart-animate; animation-duration: 2s; animation-iteration-count: infinite; }
-.kiss-animateIng .kiss-content img:nth-of-type(2n){ animation-name: heart-animate1; animation-duration: 2s; animation-iteration-count: infinite; }
+.kiss-animateIn{ animation: kiss-animateIn 1s forwards; -webkit-animation: kiss-animateIn 1s forwards; }
+.kiss-animateIng{ animation: kiss-animateIng 2s infinite; -webkit-animation: kiss-animateIng 2s infinite; }
+.kiss-animateOut{ animation: kiss-animateOut 1s forwards; -webkit-animation: kiss-animateOut 1s forwards; }
+.kiss-animateIng img{ animation-name: heart-animate; animation-duration: 2s; animation-iteration-count: infinite; }
+.kiss-animateIng img:nth-of-type(2n){ animation-name: heart-animate1; animation-duration: 2s; animation-iteration-count: infinite; }
 @keyframes kiss-animateIn{
  0%{
   opacity: 0;
@@ -1055,31 +1055,32 @@
 
 /*火箭*/
 .rocket-wrap{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.5); z-index: 15; }
-.rocket-animate{ width: 100vw; height: 100vw; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background-size: 80%; box-sizing: border-box; text-align: center; }
-.rocket-animateIn .rocket-animate{ animation: rocket-animateIn 1s forwards; }
-.rocket-animateIng .rocket-animate{ animation: rocket-animateIng 2s infinite; }
-.rocket-animateOut .rocket-animate{ animation: rocket-animateOut 1.5s forwards; }
-.rocket-animate img{ position: absolute; right: 30.15%; top: 10.6%; width: 15.9%; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3); -webkit-filter: brightness(.8); filter: brightness(.8); }
+.new-rocket-animate{ width: 100vw; height: 100vw; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; background-size: 80%; box-sizing: border-box; text-align: center; }
+.new-rocket-animateIn img{ display:none; }
+.new-rocket-animateIn{ animation: new-rocket-animateIn 1s forwards; -webkit-animation: new-rocket-animateIn 1s forwards; }
+.new-rocket-animateIng{ animation: new-rocket-animateIng 2s infinite; -webkit-animation: new-rocket-animateIng 2s infinite; }
+.new-rocket-animateOut{ animation: new-rocket-animateOut 1.5s forwards; -webkit-animation: new-rocket-animateOut 1.5s forwards; }
+.new-rocket-animate img{ position: absolute; right: 30.1%; top: 10.6%; width: 15.9%; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3); -webkit-filter: brightness(.8); filter: brightness(.8); }
 
-@keyframes rocket-animateIn{
+@keyframes new-rocket-animateIn{
  0%,20%{ background: url("../images/gift/rocket_n/up.png") no-repeat center; transform: translateY(150%); background-size: 70%; }
  60%{ background: url("../images/gift/rocket_n/up.png") no-repeat center; transform: translateY(0); background-size: 70%; }
  80%,90%{ background: url("../images/gift/rocket_n/up1.png") no-repeat center; transform: translateY(5%); background-size: 70%; }
  100%{ background: url("../images/gift/rocket_n/up2.png") no-repeat center; transform: translateY(0); background-size: 70%; }
 }
-@keyframes rocket-animateIng{
+@keyframes new-rocket-animateIng{
  0%,100%{ background: url("../images/gift/rocket_n/ing1.png") no-repeat center; transform: translateY(0); background-size: 70%; }
  25%,75%{ background: url("../images/gift/rocket_n/ing2.png") no-repeat center; transform: translateY(5%); background-size: 70%; }
  50%{ background: url("../images/gift/rocket_n/ing3.png") no-repeat center; transform: translateY(0); background-size: 70%; }
 }
-@keyframes rocket-animateOut{
+@keyframes new-rocket-animateOut{
  0%{ background: url("../images/gift/rocket_n/end.png") no-repeat center; transform: translateY(0); background-size: 70%; }
  100%{ background: url("../images/gift/rocket_n/end.png") no-repeat center; transform: translateY(-150%); background-size: 70%; }
 }
 
 @media screen and (min-device-width:1024px){
- .rocket-animate{ background-size: 30%; width: 35vw; height: 35vw; min-width: 70vh; min-height: 70vh; }
- @keyframes rocket-animateOut{
+ .new-rocket-animate{ background-size: 30%; width: 35vw; height: 35vw; min-width: 70vh; min-height: 70vh; }
+ @keyframes new-rocket-animateOut{
   0%{ background: url("../images/gift/rocket_n/end.png") no-repeat center; transform: translateY(0); background-size: 70%; }
   100%{ background: url("../images/gift/rocket_n/end.png") no-repeat center; transform: translateY(-130%); background-size: 70%; }
  }
@@ -1088,7 +1089,8 @@
 .cake-animate-wrap{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden; background:rgba(0,0,0,0.5); z-index: 15; }
 .cake-animate{ position: relative; width: 100%; height: 100%; background: url("../images/gift/cake/cake1.png") no-repeat center; background-size: 80%; z-index: 1; }
 .cake-animate-wrap div:not(.cake-animate){ position: absolute; }
-.balloon1{ width: 20%; height: 30%; background: url("../images/gift/cake/balloon1.png") no-repeat center; background-size: 60%; }
+.cake-animate-wrap > div{ width: 100%; height: 100%; }
+.balloon1{ width: 20%; height: 30%; left: 0; top: 100%; background: url("../images/gift/cake/balloon1.png") no-repeat center; background-size: 60%; }
 .balloon2{ width: 25%; height: 30%; left: 20%; top: 100%; background: url("../images/gift/cake/balloon2.png") no-repeat center; background-size: 80%; }
 .balloon3{ width: 25%; height: 30%; right: 25%; top: 100%; background: url("../images/gift/cake/balloon3.png") no-repeat center; background-size: 60%; z-index: 0; }
 .balloon4{ width: 25%; height: 30%; right: 5%; top: 100%; background: url("../images/gift/cake/balloon4.png") no-repeat center; background-size: 60%; }
@@ -1231,4 +1233,112 @@
   from{ background: url("../images/gift/cake/cake12.png") no-repeat center; background-size: 56%; opacity: 1 }
   to{ background: url("../images/gift/cake/cake12.png") no-repeat center; background-size: 56%; opacity: 0; }
  }
+}
+/*三个6动画*/
+.six-animate-wrap{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden; background: rgba(0,0,0,0.5); z-index: 15; }
+.six-animate-wrap > div{ width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.six-animate{ width: 100vw; height: 100vw; position: absolute; }
+.six-animate:first-of-type{ left: 25%; transform: scale(.8); }
+.six-animate:last-of-type{ right: 25.2%; transform: scale(.8); }
+.six-animate .flash-light{ position: absolute; opacity: 0; top: 27%; right: 30%; width: 30%; padding-bottom: 30%; background: url("../images/gift/six/light.png") no-repeat center; background-size: 100%; }
+.six-animate .bottom-shadow{ position: absolute; bottom: 15%; left: 0; right: 0; margin: auto; width: 40%; height: 10%; background: url("../images/gift/six/shadow.png") no-repeat center; background-size: 100%; }
+.six-animate .star{ position: absolute; opacity: 0; top: 0; left: 0; width: 100%; height: 100%; background: url("../images/gift/six/star.png") no-repeat center; background-size: 100%; z-index: 3; }
+.in-six-animate{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; z-index: 1; }
+.six-animateIn .in-six-animate{ animation: six-animateIn .8s forwards; }
+.six-animateIn .bottom-shadow{ animation: shadowIn .8s forwards; }
+.six-animateIn .star{ animation: star .8s forwards; }
+.six-animateIng .in-six-animate{ animation: six-animateIng 1.2s infinite; }
+.six-animateIng .flash-light{ animation: flash-light 1.2s infinite; }
+.six-animateIng .bottom-shadow{ animation: shadowIng 1.2s infinite; }
+.six-animateOut .six-animate{ animation: six-animateOut 1s forwards; }
+@keyframes six-animateIn{
+ 0%{ transform: translateY(-100%); -webkit-transform: translateY(-100%); top: 0; background:url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+ 100%{ transform: translateY(0); -webkit-transform: translateY(0); background: url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+}
+@-webkit-keyframes six-animateIn{
+ 0%{ transform: translateY(-100%); -webkit-transform: translateY(-100%); top: 0; background:url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+ 100%{ transform: translateY(0); -webkit-transform: translateY(0); background: url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+}
+@keyframes six-animateIng{
+ 0%{ transform: translateY(0) scaleY(1); -webkit-transform: translateY(0) scaleY(1); background:url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+ 20%{ transform: translateY(-20%) scaleY(0.8); -webkit-transform: translateY(-20%) scaleY(0.8); background-size: 100%; }
+ 40%{ transform: translateY(0) scaleY(1); -webkit-transform: translateY(0) scaleY(1); background-size: 100%; }
+ 55%{ transform: translateY(-12%) scaleY(0.85); -webkit-transform: translateY(-12%) scaleY(0.85); background-size: 100%; }
+ 65%,100%{ transform: translateY(0) scale(1); -webkit-transform: translateY(0) scale(1); background: url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+}
+@-webkit-keyframes six-animateIng{
+ 0%{ transform: translateY(0) scaleY(1); -webkit-transform: translateY(0) scaleY(1); background:url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+ 20%{ transform: translateY(-20%) scaleY(0.8); -webkit-transform: translateY(-20%) scaleY(0.8); background-size: 100%; }
+ 40%{ transform: translateY(0) scaleY(1); -webkit-transform: translateY(0) scaleY(1); background-size: 100%; }
+ 55%{ transform: translateY(-12%) scaleY(0.85); -webkit-transform: translateY(-12%) scaleY(0.85); background-size: 100%; }
+ 65%,100%{ transform: translateY(0) scale(1); -webkit-transform: translateY(0) scale(1); background: url("../images/gift/six/normalsix.png") no-repeat center; background-size: 100%; }
+}
+@keyframes shadowIn{
+ 0%{ transform: scale(0); -webkit-transform: scale(0); }
+ 100%{ transform: scale(1); -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes shadowIn{
+ 0%{ transform: scale(0); -webkit-transform: scale(0); }
+ 100%{ transform: scale(1); -webkit-transform: scale(1); }
+}
+@keyframes shadowIng{
+ 0%{ transform: scale(1); -webkit-transform: scale(1); }
+ 20%{ transform: scale(0.7); -webkit-transform: scale(0.7); }
+ 40%{ transform: scale(1); -webkit-transform: scale(1); }
+ 55%{ transform: scale(0.7); -webkit-transform: scale(0.7); }
+ 70%,100%{ transform: scale(1); -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes shadowIng{
+ 0%{ transform: scale(1); -webkit-transform: scale(1); }
+ 20%{ transform: scale(0.7); -webkit-transform: scale(0.7); }
+ 40%{ transform: scale(1); -webkit-transform: scale(1); }
+ 55%{ transform: scale(0.7); -webkit-transform: scale(0.7); }
+ 70%,100%{ transform: scale(1); -webkit-transform: scale(1); }
+}
+@keyframes star{
+ 0%{ opacity: 1; transform: translateY(-100%); -webkit-transform: translateY(-100%); background: url("../images/gift/six/star.png") no-repeat center; background-size: 100%; }
+ 20%{ background: url("../images/gift/six/star1.png") no-repeat center; background-size: 100%; }
+ 40%{ background: url("../images/gift/six/star2.png") no-repeat center; background-size: 100%; }
+ 60%{ background: url("../images/gift/six/star3.png") no-repeat center; background-size: 100%; }
+ 80%{ background: url("../images/gift/six/star4.png") no-repeat center; background-size: 100%; }
+ 95%{ opacity: 1; background: url("../images/gift/six/star5.png") no-repeat center; background-size: 100%; }
+ 100%{ opacity: 0; transform: translateY(0); -webkit-transform: translateY(0); opacity: 0; background: url("../images/gift/six/star5.png") no-repeat center; background-size: 100%; }
+}
+@-webkit-keyframes star{
+ 0%{ opacity: 1; transform: translateY(-100%); -webkit-transform: translateY(-100%); background: url("../images/gift/six/star.png") no-repeat center; background-size: 100%; }
+ 20%{ background: url("../images/gift/six/star1.png") no-repeat center; background-size: 100%; }
+ 40%{ background: url("../images/gift/six/star2.png") no-repeat center; background-size: 100%; }
+ 60%{ background: url("../images/gift/six/star3.png") no-repeat center; background-size: 100%; }
+ 80%{ background: url("../images/gift/six/star4.png") no-repeat center; background-size: 100%; }
+ 95%{ opacity: 1; background: url("../images/gift/six/star5.png") no-repeat center; background-size: 100%; }
+ 100%{ opacity: 0; transform: translateY(0); -webkit-transform: translateY(0); opacity: 0; background: url("../images/gift/six/star5.png") no-repeat center; background-size: 100%; }
+}
+@keyframes flash-light{
+ 0%,64%{ opacity: 0; }
+ 65%{ opacity: 1; background: url("../images/gift/six/light.png") no-repeat center; background-size: 100%; transform: scale(0.5) rotate(0); -webkit-transform: scale(0.5) rotate(0); }
+ 99%{ opacity: 1; background: url("../images/gift/six/light.png") no-repeat center; background-size: 100%; transform: scale(1.2) rotate(180deg); -webkit-transform: scale(1.2) rotate(180deg); }
+ 100%{ opacity: 0; }
+}
+@-webkit-keyframes flash-light{
+ 0%,64%{ opacity: 0; }
+ 65%{ opacity: 1; background: url("../images/gift/six/light.png") no-repeat center; background-size: 100%; transform: scale(0.5) rotate(0); -webkit-transform: scale(0.5) rotate(0); }
+ 99%{ opacity: 1; background: url("../images/gift/six/light.png") no-repeat center; background-size: 100%; transform: scale(1.2) rotate(180deg); -webkit-transform: scale(1.2) rotate(180deg); }
+ 100%{ opacity: 0; }
+}
+@keyframes six-animateOut{
+ from{ opacity: 1; }
+ to{ opacity: 0; }
+}
+@-webkit-keyframes six-animateOut{
+ from{ opacity: 1; }
+ to{ opacity: 0; }
+}
+@media screen and (min-device-width:1024px){
+ .six-animate{ width: 50%; height: 0; padding-bottom: 50%; box-sizing: border-box; position: absolute; }
+ .six-animate:first-of-type{ left: 12%; transform: scale(.7); -webkit-transform: scale(.7); }
+ .six-animate:last-of-type{ right: 12.2%; transform: scale(.7); -webkit-transform: scale(.7); }
+ .six-animate .bottom-shadow{ bottom: 13%; }
+ .six-animate .flash-light{ top: 25%; right: 28%; width: 25%; padding-bottom: 25%; }
 }

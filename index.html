@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="pa-screen" style="background-image: url(images/bg1.jpg)">
+        <div class="pa-screen hide" style="background-image: url(images/bg1.jpg)">
             <div class="just-text hide">
                 <div class="pa-user-v">
                     <img src="images/tx4.jpg" alt="">
@@ -286,28 +286,28 @@
             </div>
             <div class="message-content-wrap">
                 <div class="in-message-content">
-                    <div class="message-content msg-bg1 flex">
+                    <div style="background: linear-gradient(to right,rgba(244,4,201,0.7),rgba(33,33,97,0.7));" class="message-content msg-bg1 flex">
                         <img src="images/tx2.jpg" alt="">
                         <div class="message-user-info">
                             <i class="textOverflow">ailisi</i> <span>哈哈哈哈哈奥或或或或或或</span>
                         </div>
                         <span class="send-time">03-02 20:30</span>
                     </div>
-                    <div class="message-content msg-bg2 flex">
+                    <div style="background: linear-gradient(to right,rgba(244,4,201,0.7),rgba(33,33,97,0.7));" class="message-content msg-bg2 flex">
                         <img src="images/tx3.jpg" alt="">
                         <div class="message-user-info">
                             <i class="textOverflow">没控啊</i> <span>哈哈哈哈哈奥或或或或或或</span>
                         </div>
                         <span class="send-time">03-02 20:30</span>
                     </div>
-                    <div class="message-content msg-bg3 flex">
+                    <div style="background: linear-gradient(to right,rgba(244,4,201,0.7),rgba(33,33,97,0.7));" class="message-content msg-bg3 flex">
                         <img src="images/tx3.jpg" alt="">
                         <div class="message-user-info">
                             <i class="textOverflow">没控啊</i> <img src="images/bg.jpg" alt="">
                         </div>
                         <span class="send-time">03-02 20:30</span>
                     </div>
-                    <div class="message-content msg-bg2 flex">
+                    <div style="background: linear-gradient(to right,rgba(244,4,201,0.7),rgba(33,33,97,0.7));" class="message-content msg-bg2 flex">
                         <img src="images/tx4.jpg" alt="">
                         <div class="message-user-info">
                             <i class="textOverflow">对面太肉了</i> <span>哈哈哈哈哈奥或或或或或或</span>
@@ -401,7 +401,7 @@
             <div class="coor hide">
         </div>
         </div>
-        <div class="hiChat-content flex move-div" data-config="3" id="hiChat-content" style="left: 1550px; top:600px; width: 350px;">
+        <div class="hiChat-content flex move-div hide" data-config="3" id="hiChat-content" style="left: 1550px; top:600px; width: 350px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>二维码层</h3>
                 <div class="setClose-ico">
@@ -419,7 +419,7 @@
             </div>
             <div class="coor hide"></div>
         </div>
-        <div class="carousel-content acc-carousel move-div" data-config="5" id="carousel-content" style="left: 100px; top: 100px; height: 500px;width: 300px;">
+        <div class="carousel-content acc-carousel move-div hide" data-config="5" id="carousel-content" style="left: 100px; top: 100px; height: 500px;width: 300px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>轮播图</h3>
                 <div class="setClose-ico">
@@ -433,7 +433,7 @@
             <span style="background-image: url(images/test_h.jpg);"></span>
             <div class="coor hide"></div>
         </div>
-        <div class="logo-content move-div" id="logo-content" data-config="6" style="top: 0px; left: 0px;">
+        <div class="logo-content move-div hide" id="logo-content" data-config="6" style="top: 0px; left: 0px;">
             <div class="moveDiv-nameIco hide flex">
                 <h3>logo</h3>
                 <div class="setClose-ico">
@@ -839,8 +839,8 @@
         </div>
         <!--游轮动画 end-->
         <!--kiss动画 start-->
-        <div class="kiss-wrap kiss-animateIn hide">
-            <div class="kiss-content">
+        <div class="kiss-animate-wrap hide">
+            <div class="kiss-content kiss-animateIng">
                 <img src="images/gift/kiss/point.png" alt="">
                 <img src="images/gift/kiss/heart1.png" alt="">
                 <img src="images/gift/kiss/heart1.png" alt="">
@@ -858,26 +858,56 @@
         </div>
         <!--kiss动画 end-->
         <!--火箭动画 start-->
-            <div class="rocket-wrap rocket-animateOut hide">
-            <div class="rocket-animate">
+        <div class="rocket-wrap hide">
+            <div class="new-rocket-animate new-rocket-animateIn">
                 <img src="images/tx.jpg" alt="">
             </div>
         </div>
         <!--火箭动画 end-->
         <!--蛋糕动画 start-->
-        <div class="cake-animate-wrap cake-animateOut hide">
-            <div class="cake-animate"></div>
-            <div class="balloon1"></div>
-            <div class="balloon2"></div>
-            <div class="balloon3"></div>
-            <div class="balloon4"></div>
+        <div class="cake-animate-wrap hide">
+            <div class="cake-animateIng">
+                <div class="cake-animate"></div>
+                <div class="balloon1"></div>
+                <div class="balloon2"></div>
+                <div class="balloon3"></div>
+                <div class="balloon4"></div>
+            </div>
         </div>
         <!--蛋糕动画 end-->
+        <!--三个6动画 start-->
+        <div class="six-animate-wrap hide">
+            <div class="six-animateOut">
+                <div class="six-animate">
+                    <div class="star"></div>
+                    <div class="in-six-animate">
+                        <span class="flash-light"></span>
+                    </div>
+                    <span class="bottom-shadow"></span>
+                </div>
+                <div class="six-animate">
+                    <div class="star"></div>
+                    <div class="in-six-animate">
+                        <span class="flash-light"></span>
+                    </div>
+                    <span class="bottom-shadow"></span>
+                </div>
+                <div class="six-animate">
+                    <div class="star"></div>
+                    <div class="in-six-animate">
+                        <span class="flash-light"></span>
+                    </div>
+                    <span class="bottom-shadow"></span>
+                </div>
+            </div>
+        </div>
+        <!--三个6动画 end-->
         <!--视频背景-->
-       <!-- <div class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index:0;">
+        <!--<div class="video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index:0;">
             <div class="black" style="position: absolute; top: 0; left 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); z-index: 1;"></div>
             <video src="http://wemew.oss-cn-qingdao.aliyuncs.com/videos/newds/wemewDefault2.webm" autoplay loop></video>
         </div>-->
+        <button style="font-size: 26px;" class="ajax-btn">click</button>
     </div>
 
 </div>
